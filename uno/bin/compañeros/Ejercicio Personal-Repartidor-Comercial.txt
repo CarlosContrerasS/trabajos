@@ -1,0 +1,182 @@
+============================================ Personal ================================================================
+
+public abstract class Personal {
+	
+	private String nombre;
+	private int edad;
+	private int salario;
+	final int PLUS = 50000;
+
+	public Personal() {
+		
+	}
+	
+	public Personal(String nombre, int edad, int salario) {
+		this.nombre = nombre;
+		this.edad = edad;
+		this.salario = salario;
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public int getEdad() {
+		return edad;
+	}
+
+	public void setEdad(int edad) {
+		this.edad = edad;
+	}
+
+	public int getSalario() {
+		return salario;
+	}
+
+	public void setSalario(int salario) {
+		this.salario = salario;
+	}
+	
+	public abstract int plus();
+
+}
+
+
+
+================================================== Repartidor ======================================================
+
+
+public class Repartidor extends Personal{
+
+	private String zona;
+
+	public Repartidor() {
+	}
+
+	public Repartidor(String nombre, int edad, int salario, String zona) {
+		super(nombre, edad, salario);
+		this.zona = zona;
+	}
+	
+	public String getZona() {
+		return zona;
+	}
+
+	public void setZona(String zona) {
+		this.zona = zona;
+	}
+
+	@Override
+	public int plus() {
+		
+		if (super.getEdad()<25 & zona=="3") {			
+			
+			return super.getSalario()+super.PLUS;
+			
+		} else {
+			
+			return super.getSalario();
+			
+		}
+	}
+	
+}
+
+
+
+=================================================== Comercial ==========================================================
+
+
+
+public class Comercial extends Personal{
+	
+	private double comision;
+
+	public Comercial() {
+	}
+
+	public Comercial(String nombre, int edad, int salario, double comision) {
+		super(nombre, edad, salario);
+		this.comision = comision;
+	}
+
+	public double getComision() {
+		return comision;
+	}
+
+	public void setComision(double comision) {
+		this.comision = comision;
+	}
+
+	@Override
+	public int plus() {
+		
+		if (super.getEdad()>=30 & comision>=200000) {		
+			
+			return super.getSalario() + super.PLUS;
+			
+		} else {
+			
+			return super.getSalario();
+			
+		}
+		
+	}
+
+}
+
+
+
+=============================================== Ejecutable ===========================================================
+
+
+
+public class Ejecutable {
+
+	static Scanner scan= new Scanner(System.in);
+	
+	public static void main(String[] args) {
+		
+		//Creamos un array de objetos de la clase empleados
+        Personal arrayObjetos[]=new Personal[6];
+ 
+        //Creamos objetos en cada posicion
+        arrayObjetos[0]=new Repartidor("pepe", 24, 350000, "3");
+        arrayObjetos[1]=new Repartidor("Epi", 30, 300000, "3");
+        arrayObjetos[2]=new Repartidor("Leo", 23, 250000, "2");
+        
+        arrayObjetos[3]=new Comercial("pepes", 32, 350000, 190000);
+        arrayObjetos[4]=new Comercial("Epis", 35, 300000, 200000);
+        arrayObjetos[5]=new Comercial("Leos", 29, 250000, 250000);
+        
+        //Imprimir Objetos Array
+        for(int i=0;i<6;i++) {
+
+			
+				System.out.println("=======================================");
+				
+				if (i<=2) {
+					System.out.println("Personal Repartidor N° "+(i+1)+" :");
+					System.out.println("Zona: "+((Repartidor)arrayObjetos[i]).getZona());
+				}
+				
+				if (i>2) {
+					System.out.println("Personal comercial N° "+(i+1)+" :");
+					System.out.println("Comisión: "+((Comercial)arrayObjetos[i]).getComision());
+				}
+				
+				System.out.println("Nombre: "+arrayObjetos[i].getNombre());
+				System.out.println("Edad: "+arrayObjetos[i].getEdad());
+				System.out.println("Salario: "+arrayObjetos[i].getSalario());
+				System.out.println("Total A Pagar: "+arrayObjetos[i].plus());
+			
+				
+        }
+
+	}
+
+}

@@ -1,0 +1,181 @@
+---------------------CLASE PRODUCTO----------------------
+package Productos;
+
+public class Producto {
+		private String nombre;
+		private float precio;
+		public Producto(String nombre, float precio) {
+			this.nombre = nombre;
+			this.precio = precio;
+		}
+		public String getNombre() {
+			return nombre;
+		}
+		public void setNombre(String nombre) {
+			this.nombre = nombre;
+		}
+		public float getPrecio() {
+			return precio;
+		}
+		public void setPrecio(float precio) {
+			this.precio = precio;
+		}
+		@Override
+		public String toString() {
+			return "nombre=" + nombre + ", precio=" + precio + ",";
+		}
+		public float calcular(int cantidad) {
+			return precio*cantidad;
+		}
+		
+		
+}
+------------------CLASE PERECEDERO------------------------------------
+
+package Productos;
+
+public class Perecedero extends Producto{
+	
+	 private int diasCaducar;
+
+	public Perecedero(String nombre, float precio, int diasCaducar) {
+		super(nombre, precio);
+		this.diasCaducar = diasCaducar;
+	}
+
+	public int getDiasCaducar() {
+		return diasCaducar;
+	}
+
+	public void setDiasCaducar(int diasCaducar) {
+		this.diasCaducar = diasCaducar;
+	}
+
+	@Override
+	public String toString() {
+		return super.toString()+" diasCaducar=" + diasCaducar + "";
+	}
+	
+	public float calcular(int cantidad) {
+		
+		float precioFinal=super.calcular(cantidad);
+		
+		switch (diasCaducar){
+		
+		case 1:
+			precioFinal /=4;
+			break;
+		case 2:
+			precioFinal /=3;
+			break;
+		case 3:
+			precioFinal /=2;
+			break;
+		}
+		
+		return precioFinal;
+}
+
+-----------CLASE NO PERECEDERO--------------------------
+
+package Productos;
+
+public class NoPerecedero extends Producto {
+		private String tipo;
+
+		public NoPerecedero(String tipo,String nombre, float precio) {
+			super(nombre, precio);
+			this.tipo = tipo;
+		}
+
+		public String getTipo() {
+			return tipo;
+		}
+
+		public void setTipo(String tipo) {
+			this.tipo = tipo;
+		}
+
+		@Override
+		public String toString() {
+			return super.toString()+"tipo=" + tipo + " ";
+		}
+		
+		
+	
+}
+--------------MAIN-------------------------------
+package Productos;
+
+import java.util.Scanner;
+
+public class Principal {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner entradaPerecedero=new Scanner(System.in);
+		Scanner entradaNoPerecedero=new Scanner(System.in);
+		//producto
+		String nombre;
+		float precio;
+		//perecedero
+		int diasCaducar;
+		//noperecedero
+		String tipo=null;
+		float  total=0;
+		
+		
+		Producto[] productos=new Producto[4];
+		
+		
+		
+		for(int i=0; i<2; i++) {
+			//Scanner entradaPerecedero=new Scanner(System.in);
+			System.out.println("ingrese nombre Producto Perecedero " +(i+1)+":");
+			nombre=entradaPerecedero.next();
+			System.out.println("ingrese  precio Producto Perecedero " +(i+1)+":");
+			precio=entradaPerecedero.nextFloat();
+			System.out.println("ingrese dias caducar Producto Perecedero " +(i+1)+":");
+			diasCaducar=entradaPerecedero.nextInt();
+			productos[i] = new Perecedero(nombre,precio,diasCaducar);
+			//entradaPerecedero.close();
+		}
+		
+		
+		for(int i=2; i<4; i++) {
+			//Scanner entradaNoPerecedero=new Scanner(System.in);
+			System.out.println("ingrese nombre Producto NoPerecedero " +(i+1)+":");
+			nombre=entradaNoPerecedero.next();
+			System.out.println("ingrese precio Producto No Perecedero " +(i+1)+":");
+			precio=entradaNoPerecedero.nextFloat();
+			productos[i] = new NoPerecedero(tipo,nombre,precio);
+			//entradaNoPerecedero.close();
+		}
+		//entradaNoPerecedero.close();
+		
+		/*productos[0] = new Producto("producto 1",40);
+		productos[1] = new Perecedero("producto 2",6000,3);
+		productos[2] = new NoPerecedero("tipo 1","producto 3",70);
+		
+		float total=0;*/
+		
+		
+		
+		for(int i=0; i<productos.length; i++ ) {
+			total += productos[i].calcular(1);			
+		}
+		
+		for(int i=0; i<productos.length; i++) {
+			
+			System.out.println("El precio del producto "+(i+1)+" es: "+productos[i].getPrecio());
+			
+		}
+		
+		System.out.println("El total es: "+total);
+		System.out.println(productos[1].getNombre());
+				
+		
+		
+	}	
+
+}
