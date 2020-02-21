@@ -14,8 +14,8 @@ public class Sala2D extends Sala {
 		
 	}
 	
-public Sala2D() {
-		}
+	public Sala2D() {
+	}
 
 	public int getNumSala() {
 		return numSala;

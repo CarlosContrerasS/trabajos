@@ -11,6 +11,13 @@ public class PruebaPintar {
 		int cantidad_1=0, cantidad_2=0, cantidad=0;
 		int Asientos[] = new int[40];
 		
+		Sala2D sala2d_A = new Sala2D();
+		Sala2D sala2d_B = new Sala2D();
+		Sala3D sala3d = new Sala3D();
+		Sala4Dx sala4dx = new Sala4Dx();
+		SalaImax salaimax_A = new SalaImax();
+		SalaImax salaimax_B = new SalaImax();
+		
 		cliente clientes = new cliente();
 		
 		clientes.adultos();

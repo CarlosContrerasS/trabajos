@@ -12,6 +12,9 @@ public class SalaImax extends Sala {
 		this.cantAsiento=cantAsiento;
 		
 	}
+	
+	public SalaImax() {
+	}
 
 	public int getNumSala() {
 		return numSala;

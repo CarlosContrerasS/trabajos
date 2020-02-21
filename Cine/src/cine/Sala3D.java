@@ -12,6 +12,9 @@ public class Sala3D extends Sala {
 		this.cantAsiento=cantAsiento;
 		
 	}
+	
+	public Sala3D() {
+	}
 
 	public int getNumSala() {
 		return numSala;

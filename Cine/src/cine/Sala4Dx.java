@@ -13,6 +13,9 @@ public class Sala4Dx extends Sala {
 		this.cantAsiento=cantAsiento;
 		
 	}
+	
+	public Sala4Dx() {
+	}
 
 	public int getNumSala() {
 		return numSala;
