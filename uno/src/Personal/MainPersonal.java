@@ -11,8 +11,6 @@ public class MainPersonal {
 		Comercial[] TipoPersonal_1 = new Comercial[2];
 		Repartidor[] TipoPersonal_2 = new Repartidor[2];
 		
-		
-		
 		System.out.println("Ingrese la Cantidad del Personal que es del Area Comercial");
 		int N = entrada.nextInt();
 		
@@ -32,8 +30,6 @@ public class MainPersonal {
 			TipoPersonal_1[i].Plus();
 			entrada.nextLine();
 		}
-		
-		
 		
 		System.out.println("Ingrese la Cantidad del Personal que es Repartidor(a)");
 		int M = entrada.nextInt();
@@ -64,7 +60,6 @@ public class MainPersonal {
 					+ " con la edad de " + TipoPersonal_1[i].getEdad()
 					+ " y le corresponde una comision de " + TipoPersonal_1[i].getComision());
 		}
-		
 		
 		for (int i = 0; i<2; i++) {
 			System.out.println("El Repartidor  "+TipoPersonal_2[i].getNombre()
