@@ -10,7 +10,6 @@ INDEX VERSION 1.131+C:\Users\Alumno\Desktop\Java\trabajos\.metadata\.plugins\org
 3578912340.index
 3570859869.index
 1918225692.index
-868221269.index
 2530313595.index
 4166101757.index
 374594476.index
