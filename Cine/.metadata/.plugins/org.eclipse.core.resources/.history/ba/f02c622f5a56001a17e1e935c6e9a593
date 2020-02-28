@@ -1,0 +1,145 @@
+package cine;
+
+import java.util.Scanner;
+
+public class cliente{
+	
+	private int adulto;
+	private int nino;
+	private int entrada;
+	private double montoAdulto; 
+	private int horario;
+	private double montoNino;
+	private double montoTotal;
+	private int Sala;
+	
+	Scanner scanner = new Scanner(System.in);
+	
+	//public class cliente(int sala, ) {
+		
+	//}
+	
+	public void adultos() {
+
+		System.out.println("Ingrese cantidad de adultos: ");
+		this.adulto = scanner.nextInt();
+		this.setAdulto(adulto);
+	}
+	
+	public void ninos() {
+		System.out.println("Ingrese cantidad de ninos: ");
+		this.nino = scanner.nextInt();	
+		this.setNino(nino);
+	}
+	
+	public void tipoSala(int Sala) {
+		
+		this.Sala = Sala;	
+
+		switch (Sala){
+        
+        case 1:
+            setEntrada(2000);
+            break;
+        case 2:
+        	setEntrada(2000);
+            break;
+        case 3:
+        	setEntrada(3000);
+        case 4:
+        	setEntrada(7000);
+        case 5:
+        	setEntrada(5000);
+        case 6:
+        	setEntrada(5000);
+            break;
+        }
+	}
+	
+
+	public void MontoAdulto (int hora) {
+		if (hora <14) {
+		setMontoAdulto(adulto * entrada);
+		}else {
+		setMontoAdulto (adulto * (entrada * 1.3));
+		}
+	}
+	
+	public void MontoNino (int horario) {
+		if (horario <14) {
+			setMontoNino (nino * (entrada*0.8));
+		}
+		else {
+			setMontoNino (nino *(entrada *1.04));
+		}
+		
+	}
+
+	public double Total() {
+		montoTotal = montoAdulto + montoNino;
+		System.out.println("El monto total a pagar es: " + montoTotal);
+		return montoTotal;
+	}
+	
+
+	public int getAdulto() {
+		return adulto;
+	}
+
+	public void setAdulto(int adulto) {
+		this.adulto = adulto;
+	}
+
+	public int getNino() {
+		return nino;
+	}
+
+	public void setNino(int nino) {
+		this.nino = nino;
+	}
+
+	public int getEntrada() {
+		return entrada;
+	}
+
+	public void setEntrada(int entrada) {
+		this.entrada = entrada;
+	}
+
+	public double getMontoNino() {
+		return montoNino;
+	}
+
+	public void setMontoNino(double montoNino) {
+		this.montoNino = montoNino;
+	}
+
+	public double getMontoTotal() {
+		return montoTotal;
+	}
+
+	public void setMontoTotal(double montoTotal) {
+		this.montoTotal = montoTotal;
+	}
+
+	public double getMontoAdulto() {
+		return montoAdulto;
+	}
+
+	public void setMontoAdulto(double montoAdulto) {
+		this.montoAdulto = montoAdulto;
+	}
+
+	public int getSala() {
+		return Sala;
+	}
+
+	public void setSala(int sala) {
+		Sala = sala;
+	}
+
+	
+}
+	
+
+

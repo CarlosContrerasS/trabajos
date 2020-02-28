@@ -1,0 +1,99 @@
+package Prueba;
+
+import java.util.Scanner;
+
+public class Huevo {
+	private int lanzamiento;
+	private int fila;
+	private int columna; 
+	private int puntaje;
+	private int puntajeC = 0;
+	private int puntajeK = 0;
+	private int puntajeAdicional;
+	private int puntajeTotal;
+	
+	public Huevo() {
+		
+	}
+	
+	public int getPuntajeTotal() {
+		return puntajeTotal;
+	}
+
+	public void setPuntajeTotal(int puntajeTotal) {
+		this.puntajeTotal = puntajeTotal;
+	}
+
+	public int getPuntajeC() {
+		return puntajeC;
+	}
+
+	public void setPuntajeC(int puntajeC) {
+		this.puntajeC = puntajeC;
+	}
+
+	public int getPuntajeK() {
+		return puntajeK;
+	}
+
+	public void setPuntajeK(int puntajeK) {
+		this.puntajeK = puntajeK;
+	}
+
+	public int getPuntajeAdicional() {
+		return puntajeAdicional;
+	}
+
+	public void setPuntajeAdicional(int puntajeAdicional) {
+		this.puntajeAdicional = puntajeAdicional;
+	}
+	
+	
+	public Huevo(int lanzamiento, int puntaje) {
+		this.lanzamiento = lanzamiento;
+		this.puntaje = puntaje;
+	}
+	
+		
+	public int getLanzamiento() {
+		return lanzamiento;
+	}
+	public void setLanzamiento(int lanzamiento) {
+		this.lanzamiento = lanzamiento;
+	}
+	
+	public int getPuntaje() {
+		return puntaje;
+	}
+	public void setPuntaje(int puntaje) {
+		this.puntaje = puntaje;
+	}
+	
+
+	public int getFila() {
+		return fila;
+	}
+
+	public void setFila(int valor) {
+		this.fila=valor;
+	}
+
+	public int getColumna() {
+		return columna;
+	}
+
+	public void setColumna(int valor) {
+		this.columna=valor;
+	
+	}
+    
+	public void Adicional() {
+	setPuntajeAdicional( getPuntajeK() + getPuntajeK());
+	}
+		
+	public void Total() {
+	setPuntajeTotal( puntaje + getPuntajeAdicional());
+	
+		System.out.println("El puntaje obtenido es " + getPuntajeTotal() );
+	}		
+}

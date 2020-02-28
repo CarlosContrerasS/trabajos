@@ -1,0 +1,63 @@
+package Prueba;
+
+public class Kromi extends Carro {
+	private int anoFabricacion;
+	private String marca;
+	private int fila;
+	private int columna; 
+	private int [] Matriz_kromi= new int [3]; //para la posicion en el tablero
+	
+	public Kromi(int cantOcupantes, int fechaIng, int [] posicion, int anoFabricacion, String marca) {
+		super(cantOcupantes, fechaIng, posicion);
+		this.anoFabricacion = anoFabricacion;
+		this.marca = marca;
+	}
+		
+	public Kromi() {
+		
+	}
+	
+	public void Matriz_Kromi() {
+		for (int i=0; i<2; i++) {
+			setMatriz_Kromi(i, 1);
+		}
+	}
+	
+	public int[] Vectorfinal_Kromi(int fila, int columna) {//entrega el punto final de un Kromi
+		int [] Vectorfinal_Kromi = new int[2];
+		Vectorfinal_Kromi[0]=fila+2;
+		Vectorfinal_Kromi[1]=columna;
+		
+		return Vectorfinal_Kromi;
+	}
+	
+	public int getAnoFabricacion() {
+		return anoFabricacion;
+	}
+	public void setAnoFabricacion(int anoFabricacion) {
+		this.anoFabricacion = anoFabricacion;
+	}
+	public String getMarca() {
+		return marca;
+	}
+	public void setMarca(String marca) {
+		this.marca = marca;
+	}
+
+	public int getMatriz_Kromi() {
+			Matriz_Kromi[0]=fila;
+			Matriz_Kromi[1]=columna;
+			Matriz_Kromi[2] = "K";
+			
+		 return Matriz_Kromi;
+	}
+	
+	public void setMatriz_Kromi(int indice, int valor) {
+		 Matriz_Kromi[indice]=valor;
+	}
+	
+	}
+
+
+
+

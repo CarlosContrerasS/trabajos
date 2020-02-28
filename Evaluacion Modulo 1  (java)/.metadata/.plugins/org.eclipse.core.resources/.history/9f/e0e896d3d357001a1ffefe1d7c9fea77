@@ -1,0 +1,54 @@
+package Prueba;
+
+public class Kromi extends Carro {
+	private int anoFabricacion;
+	private String marca;
+	private int [] Matriz_kromi= new int [2]; //para la posicion en el tablero
+	
+	public Kromi(int cantOcupantes, int fechaIng, int fila, int columna, int anoFabricacion, String marca) {
+		super(cantOcupantes, fechaIng, fila, columna);
+		this.anoFabricacion = anoFabricacion;
+		this.marca = marca;
+	}
+		
+	public Kromi() {
+		
+	}
+	
+	public void Matriz_Kromi() {
+		for (int i=0; i<2; i++) {
+			setMatriz_kromi(i, 1);
+		}
+	}
+	
+	public void Objeto_Kromi(int fila, int columna, String K) {//entrega el un arreglo con las fila, columnas y el String que se debe formar
+		
+	}
+	
+	public int getAnoFabricacion() {
+		return anoFabricacion;
+	}
+	public void setAnoFabricacion(int anoFabricacion) {
+		this.anoFabricacion = anoFabricacion;
+	}
+	public String getMarca() {
+		return marca;
+	}
+	public void setMarca(String marca) {
+		this.marca = marca;
+	}
+
+
+	public int[] getMatriz_kromi() {
+		return Matriz_kromi;
+	}
+
+	public void setMatriz_kromi(int indice, int valor) {
+		Matriz_kromi [indice]= valor;
+	}
+	
+	}
+
+
+
+

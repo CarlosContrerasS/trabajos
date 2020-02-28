@@ -1,0 +1,59 @@
+package Prueba;
+
+public class Caguano extends Carro{
+	private int alcanceTiro;
+	private String colorConfeti;
+	private int [][] Matriz_Caguano= new int [2][2]; //para la posicion en el tablero
+	private String [][]  Objeto_Caguano = new String [3][2];
+	
+	public Caguano(int cantOcupantes, int fechaIng, int[] posicion, int alcanceTiro, String colorConfeti) {
+		super(cantOcupantes, fechaIng, posicion);
+		this.alcanceTiro = alcanceTiro;
+		this.colorConfeti = colorConfeti;
+	}
+	public Caguano(){
+		
+	}
+	
+	public void Matriz_Caguano() {
+		for (int i=0; i<2; i++) {
+			setMatriz_Caguano(i, i, 1);
+		}
+	}
+	
+	public String [] Objeto_Caguano(int fila, int columna) {//entrega el punto final de un Caguano
+		
+		 Objeto_Caguano	[fila][columna]=(fila, columna, "C");
+		 
+		
+		return Matriz_Caguano[][];
+	}
+	
+	public int getAlcanceTiro() {
+		return alcanceTiro;
+	}
+	public void setAlcanceTiro(int alcanceTiro) {
+		this.alcanceTiro = alcanceTiro;
+	}
+	public String getColorConfeti() {
+		return colorConfeti;
+	}
+	public void setColorConfeti(String colorConfeti) {
+		this.colorConfeti = colorConfeti;
+	}
+	public int getMatriz_Caguano(int i, int j) {
+		  
+		 return Matriz_Caguano[i][j];
+	}
+	public void setMatriz_Caguano(int indice, int indice_2, int valor) {
+		 Matriz_Caguano[indice][indice_2]=valor;
+	}
+	public String[][] getObjeto_Caguano(int i, int j) {
+		return Objeto_Caguano[i][j];
+	}
+	public void setObjeto_Caguano(int indice, int indice_2, String valor) {
+		Objeto_Caguano[indice][indice_2]=valor; 
+	}
+	
+	
+}

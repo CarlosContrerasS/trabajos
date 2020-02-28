@@ -1,0 +1,60 @@
+package Prueba;
+
+public class Prueba {
+
+	public static void main(String[] args) {
+		
+		int contador =0;
+		char cont='A';
+		String[][] Matriz = new String [16][16];	
+				
+		for(int j = 0; j<16; j++) {
+			for(int i = 0; i<16; i++) {
+				
+				if (i==0 && j==0) {
+					Matriz[0][0]=("  ");
+				}
+				else if(j==0 && i>0 ) {
+					Matriz[j][0]=(Character.toString(cont));
+					cont++;
+					}
+				else if(i==0 && j>0 ) {
+						if (contador <9) {
+							contador++;
+							Matriz[0][j]=("0"+Integer.toString(contador));					
+							}
+						else {
+						contador++;
+						Matriz[0][j]=(Integer.toString(contador));
+						}
+				}
+				else
+				
+					Matriz[j][i]=("[   ]");
+				}
+			}
+	
+		
+		for(int i = 0; i<16; i++) {
+			for(int j=0; j<15; j++) {
+				System.out.print(Matriz[j][i]+"  \t");
+			}
+			System.out.println(Matriz[15][i]);
+		}
+		
+		Matriz[4][3]="[ H ]";
+		
+						
+		System.out.println(" \n");
+		
+		for(int i = 0; i<16; i++) {
+			for(int j = 0; j<15; j++) {
+				System.out.print(Matriz[j][i]+" \t");
+			}
+			System.out.println("  "+Matriz[15][i]+" \t  ");
+		}
+		
+	}
+	
+
+}

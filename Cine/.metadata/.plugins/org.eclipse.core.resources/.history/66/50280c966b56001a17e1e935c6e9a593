@@ -1,0 +1,55 @@
+package cine;
+
+public class SalaImax extends Sala {
+	private int numSala=5;
+	private int valorAsiento=5000;
+	private int cantAsiento=40;
+
+	public SalaImax(int numSala, int valorAsiento, int cantAsiento) {
+		
+		this.numSala=numSala;
+		this.valorAsiento = valorAsiento;
+		this.cantAsiento=cantAsiento;
+		
+	}
+	
+	public SalaImax() {
+		
+	}
+	
+	public int[]Asiento() {
+		
+		int asientos[] = new int[getCantAsiento()];
+		for (int i =0;i<getCantAsiento(); i++) {
+			asientos[i]=1;
+		}
+	
+		return asientos;
+	}
+
+	public int getNumSala() {
+		return numSala;
+	}
+
+	public void setNumSala(int numSala) {
+		this.numSala = numSala;
+	}
+
+	public int getValorAsiento() {
+		return valorAsiento;
+	}
+
+	public void setValorAsiento(int valorAsiento) {
+		this.valorAsiento = valorAsiento;
+	}
+
+	public int getCantAsiento() {
+		return cantAsiento;
+	}
+
+	public void setCantAsiento(int cantAsiento) {
+		this.cantAsiento = cantAsiento;
+	}
+	
+	
+}

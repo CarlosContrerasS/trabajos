@@ -1,0 +1,15 @@
+package cine;
+
+public abstract class Sala {
+	
+	public Sala() {
+		
+	}
+	
+	public int Asientos() {
+		
+	}
+	
+	
+}
+	

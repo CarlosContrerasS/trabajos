@@ -1,0 +1,45 @@
+package Prueba;
+
+public class Caguano extends Carro{
+	private int alcanceTiro;
+	private String colorConfeti;
+	private int [] Matriz_Caguano= new int [1]; //para la posicion en el tablero
+
+	
+	public Caguano(int cantOcupantes, int fechaIng, int fila, int columna, int alcanceTiro, String colorConfeti) {
+		super(cantOcupantes, fechaIng, fila, columna);
+		this.alcanceTiro = alcanceTiro;
+		this.colorConfeti = colorConfeti;
+	}
+	public Caguano(){
+		
+	}
+	
+	public void Matriz_Caguano() {
+		for (int i=0; i<2; i++) {
+			setMatriz_Caguano(i, 1);
+		}
+	}
+	
+	public int getAlcanceTiro() {
+		return alcanceTiro;
+	}
+	public void setAlcanceTiro(int alcanceTiro) {
+		this.alcanceTiro = alcanceTiro;
+	}
+	public String getColorConfeti() {
+		return colorConfeti;
+	}
+	public void setColorConfeti(String colorConfeti) {
+		this.colorConfeti = colorConfeti;
+	}
+	public String getMatriz_Caguano(int i) {
+		  
+		 return Matriz_Caguano[i];
+	}
+	public void setMatriz_Caguano(int indice, int valor) {
+		 Matriz_Caguano[indice]=valor;
+	}
+	
+	
+}

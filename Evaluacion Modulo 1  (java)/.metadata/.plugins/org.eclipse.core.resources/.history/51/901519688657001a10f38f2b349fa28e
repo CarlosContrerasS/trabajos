@@ -1,0 +1,59 @@
+package Prueba;
+
+public class Caguano extends Carro{
+	private int alcanceTiro;
+	private String colorConfeti;
+	private int [] Vector_Caguano= new int [1]; //para la posicion en el tablero
+
+	
+	public Caguano(int cantOcupantes, int fechaIng, int fila, int columna, int alcanceTiro, String colorConfeti) {
+		super(cantOcupantes, fechaIng, fila, columna);
+		this.alcanceTiro = alcanceTiro;
+		this.colorConfeti = colorConfeti;
+	}
+	public Caguano(){
+		
+	}
+	
+	public void Vector_Caguano() {
+		for (int i=0; i<2; i++) {
+			setVector_Caguano(i, 1);
+		}
+	}
+	
+	public int[][] Objeto_Caguano(int fila, int columna) {//entrega el un arreglo con las fila, columnas y el String que se debe formar
+		int [][] Matriz_Caguano = new int[2][3];
+		
+		int c = Integer.parseInt("C");
+		Matriz_Caguano[0][0]=fila;
+		Matriz_Caguano[0][1]=columna;
+		Matriz_Caguano[0][2]=c;
+		Matriz_Caguano[1][0]=(fila+1);
+		Matriz_Caguano[1][1]=columna;
+		Matriz_Caguano[1][2]=c;
+		
+		return Matriz_Caguano;
+	}
+	
+	public int getAlcanceTiro() {
+		return alcanceTiro;
+	}
+	public void setAlcanceTiro(int alcanceTiro) {
+		this.alcanceTiro = alcanceTiro;
+	}
+	public String getColorConfeti() {
+		return colorConfeti;
+	}
+	public void setColorConfeti(String colorConfeti) {
+		this.colorConfeti = colorConfeti;
+	}
+	public int getVector_Caguano(int i) {
+		  
+		 return Vector_Caguano[i];
+	}
+	public void setVector_Caguano(int indice, int valor) {
+		 Vector_Caguano[indice]=valor;
+	}
+	
+	
+}

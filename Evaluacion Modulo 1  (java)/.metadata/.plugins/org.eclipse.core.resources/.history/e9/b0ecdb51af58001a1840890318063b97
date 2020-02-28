@@ -1,0 +1,166 @@
+package Prueba;
+
+public class Prueba {
+
+	public static void main(String[] args) {
+		
+		int contador =0;
+		char Cont='A';
+		String[][] Matriz = new String [16][16];	
+		
+		//Para llenar la Matriz inicial.
+				
+		for(int j = 0; j<16; j++) {//eje y (vertical)
+			for(int i = 0; i<16; i++) {//eje x (horizontal)
+				
+				if (i==0 && j==0) { //posicion (0,0) se da un espacio
+					Matriz[0][0]=("  ");
+					}
+				else if(j==0 && i>0 ) { //Para el eje horizontal, colocamos letras de A hasta la O
+					Matriz[i][0]=("  "+Character.toString(Cont)); //transformamos el caracter en String
+					Cont++;
+					}
+				else if(i==0 && j>0 ) {//Para el eje vertical, colocamos numeros de 1 a 15.
+						if (contador <9) {//esta parte es para que tenga el mismo ancho los 
+										 // numeros menores que 10.(recuerde que se incrementa
+										// que se imprime.
+							contador++;
+							Matriz[0][j]=("  "+Integer.toString(contador));					
+							}
+						else {// los numeros mayores de 10.
+						contador++;
+						Matriz[0][j]=(" "+Integer.toString(contador));
+						}
+				}
+				else //Esta parte rellena lo que no esta en los ejes.
+				
+					Matriz[j][i]=("[   ]");
+				}
+			}
+	
+		//Para mostras la matriz
+		for(int i = 0; i<16; i++) { //eje y (vertical)
+			for(int j=0; j<15; j++) { //eje x (Horizontal)
+				System.out.print(Matriz[j][i]+"  \t"); //imrimo en todo menos la ultima columna
+			}
+			System.out.println(Matriz[15][i]); //imprimo con salto de linea la ultima columna.
+		}
+		
+		//esto es solo una muestra de como llenar con un elemento la matriz.
+		Matriz[4][3]="[ H ]"; //Se coloca una H en la posición D y 3.
+		
+						
+		System.out.println(" \n");
+		
+		//Para ver la matriz con el cambio realizado.
+		for(int i = 0; i<16; i++) {
+			for(int j = 0; j<15; j++) {
+				System.out.print(Matriz[j][i]+" \t");
+			}
+			System.out.println("  "+Matriz[15][i]+" \t  ");
+		}
+		
+		
+		indice = 0;
+		Tipo++;
+		
+			columna =(int) (Math.random()*14+1);
+			fila = (int) (Math.random()*14+1);
+			tamano=Filas.size();
+			for(int i=0; i<tamano; i++) {
+				if (Filas.get(i)!=fila && Columnas.get(i)!=columna) {
+					indice++;
+					i=tamano;
+					Filas.add(fila);
+					Columnas.add(columna);
+					cag_2.setFila(fila);
+					cag_2.setColumna(columna);
+					String [][] Poscion_cag_2=cag_2.Posicion_Caguano();
+					int fila_1 = Integer.parseInt(Poscion_cag_2[0][0]);
+					int columna_1 = Integer.parseInt(Poscion_cag_2[0][1]);
+					String dato_1 = Poscion_cag_2[0][2];
+					int fila_2 = Integer.parseInt(Poscion_cag_2[1][0]);
+					int columna_2 = Integer.parseInt(Poscion_cag_2[1][1]);
+					String dato_2 = Poscion_cag_2[1][2];
+					
+					Matriz[columna_1][fila_1]=dato_1;
+					Matriz[columna_2][fila_2]=dato_2;
+				
+					}
+				}
+			columna =(int) (Math.random()*14+1);
+			fila = (int) (Math.random()*14+1);
+			tamano=Filas.size();
+			for(int i=0; i<tamano; i++) {
+				if (Filas.get(i)!=fila && Columnas.get(i)!=columna) {
+					indice++;
+					i=tamano;
+					Filas.add(fila);
+					Columnas.add(columna);
+					cag_3.setFila(fila);
+					cag_3.setColumna(columna);
+					String [][] Poscion_cag_3=cag_3.Posicion_Caguano();
+					int fila_1 = Integer.parseInt(Poscion_cag_3[0][0]);
+					int columna_1 = Integer.parseInt(Poscion_cag_3[0][1]);
+					String dato_1 = Poscion_cag_3[0][2];
+					int fila_2 = Integer.parseInt(Poscion_cag_3[1][0]);
+					int columna_2 = Integer.parseInt(Poscion_cag_3[1][1]);
+					String dato_2 = Poscion_cag_3[1][2];
+					
+					Matriz[columna_1][fila_1]=dato_1;
+					Matriz[columna_2][fila_2]=dato_2;
+				
+					}
+				}
+			columna =(int) (Math.random()*14+1);
+			fila = (int) (Math.random()*14+1);
+			tamano=Filas.size();
+			for(int i=0; i<tamano; i++) {
+				if (Filas.get(i)!=fila && Columnas.get(i)!=columna) {
+					indice++;
+					i=tamano;
+					Filas.add(fila);
+					Columnas.add(columna);
+					cag_4.setFila(fila);
+					cag_4.setColumna(columna);
+					String [][] Poscion_cag_4=cag_4.Posicion_Caguano();
+					int fila_1 = Integer.parseInt(Poscion_cag_4[0][0]);
+					int columna_1 = Integer.parseInt(Poscion_cag_4[0][1]);
+					String dato_1 = Poscion_cag_4[0][2];
+					int fila_2 = Integer.parseInt(Poscion_cag_4[1][0]);
+					int columna_2 = Integer.parseInt(Poscion_cag_4[1][1]);
+					String dato_2 = Poscion_cag_4[1][2];
+					
+					Matriz[columna_1][fila_1]=dato_1;
+					Matriz[columna_2][fila_2]=dato_2;
+				
+					}
+				}
+			columna =(int) (Math.random()*14+1);
+			fila = (int) (Math.random()*14+1);
+			tamano=Filas.size();
+			for(int i=0; i<tamano; i++) {
+				if (Filas.get(i)!=fila && Columnas.get(i)!=columna) {
+					indice++;
+					i=tamano;
+					Filas.add(fila);
+					Columnas.add(columna);
+					cag_5.setFila(fila);
+					cag_5.setColumna(columna);
+					String [][] Poscion_cag_5=cag_5.Posicion_Caguano();
+					int fila_1 = Integer.parseInt(Poscion_cag_5[0][0]);
+					int columna_1 = Integer.parseInt(Poscion_cag_5[0][1]);
+					String dato_1 = Poscion_cag_5[0][2];
+					int fila_2 = Integer.parseInt(Poscion_cag_5[1][0]);
+					int columna_2 = Integer.parseInt(Poscion_cag_5[1][1]);
+					String dato_2 = Poscion_cag_5[1][2];
+					
+					Matriz[columna_1][fila_1]=dato_1;
+					Matriz[columna_2][fila_2]=dato_2;
+				
+					}
+				}
+	}
+	
+
+}

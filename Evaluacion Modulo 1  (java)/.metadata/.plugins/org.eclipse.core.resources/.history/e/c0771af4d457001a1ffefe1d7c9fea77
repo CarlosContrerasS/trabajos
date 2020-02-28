@@ -1,0 +1,66 @@
+package Prueba;
+
+public class Kromi extends Carro {
+	private int anoFabricacion;
+	private String marca;
+	private int [] Matriz_kromi= new int [2]; //para la posicion en el tablero
+	
+	public Kromi(int cantOcupantes, int fechaIng, int fila, int columna, int anoFabricacion, String marca) {
+		super(cantOcupantes, fechaIng, fila, columna);
+		this.anoFabricacion = anoFabricacion;
+		this.marca = marca;
+	}
+		
+	public Kromi() {
+		
+	}
+	
+	public void Matriz_Kromi() {
+		for (int i=0; i<2; i++) {
+			setMatriz_kromi(i, 1);
+		}
+	}
+	
+	/*public Objeto_Kromi(int fila, int columna, String K) {//entrega el un arreglo con las fila, columnas y el String que se debe formar
+		*String [][] Vector_Kromi = new String[3][3];
+				
+	*	Vector_Kromi[0][0]=Integer.toString(getFila());
+		*Vector_Kromi[0][1]=Integer.toString(getColumna());
+		*Vector_Kromi[0][2]="K";
+		*Vector_Kromi[1][0]=Integer.toString((getFila()+1));
+		*Vector_Kromi[1][1]=Integer.toString(getColumna());
+		*Vector_Kromi[1][2]="K";
+		*Vector_Kromi[2][0]=Integer.toString((getFila()+2));
+		*Vector_Kromi[2][1]=Integer.toString(getColumna());
+		*Vector_Kromi[2][2]="K";
+		
+		*return Vector_Kromi;
+	*}*/
+	
+	public int getAnoFabricacion() {
+		return anoFabricacion;
+	}
+	public void setAnoFabricacion(int anoFabricacion) {
+		this.anoFabricacion = anoFabricacion;
+	}
+	public String getMarca() {
+		return marca;
+	}
+	public void setMarca(String marca) {
+		this.marca = marca;
+	}
+
+
+	public int[] getMatriz_kromi() {
+		return Matriz_kromi;
+	}
+
+	public void setMatriz_kromi(int indice, int valor) {
+		Matriz_kromi [indice]= valor;
+	}
+	
+	}
+
+
+
+

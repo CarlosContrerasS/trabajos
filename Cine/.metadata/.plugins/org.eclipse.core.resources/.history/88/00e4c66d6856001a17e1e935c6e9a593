@@ -1,0 +1,280 @@
+package cine;
+
+import java.util.Scanner;
+
+
+public class PruebaPintar {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		double 	Total=0;
+		int N = 0;
+		Boolean test = true;
+		Scanner entrada = new Scanner(System.in);
+		
+		System.out.println("¿Desea realizar una reserva? (si/no) :");
+		String respuesta = entrada.next();
+		
+		
+		while (respuesta.equalsIgnoreCase("si")) {
+		
+		while(test != false) {
+			
+			System.out.println("************************************");
+		
+			String Peliculas[]= {"El Exorcista", "La mano que aprieta",
+					"Como perder a un awaker en 10 días", "Muy Rapido y Sin Furia 10", 
+					"Martes 13 todos los martes", "Armagedon capitulo final"};
+		
+			String[] Seleccion = Cartelera.cartelera(Peliculas);
+		
+			String[] horario = Cartelera.horario(Seleccion[1]);
+		
+			int sala=Cartelera.asignacion_sala(Seleccion[2], horario[1]);
+			int hora= Integer.parseInt(horario[0].substring(0, 2));
+		
+			System.out.println("************************************");
+			System.out.println("La pelicula selescionada es: "+Seleccion[0]
+					+ "\n"+"A las : "+horario[0]
+							+ "\n"+"La Función se realizara en la Sala : "+sala);
+		
+			cliente clientes = new cliente();
+		
+		
+			clientes.adultos();
+			clientes.ninos();
+		
+			int cantidad_entradas = clientes.getAdulto() + clientes.getNino();
+			System.out.println("la cantidad de entrada de niños es: "+ clientes.getNino()
+							+"\n" +" la cantidad de Adultos es :" + clientes.getAdulto()
+							+"\n" + " la cantidad total es  : "+ cantidad_entradas);
+		
+		
+			switch (sala){
+        		case 1:
+        			N = 40;
+        			Sala2D Sala_2D_A = new Sala2D();
+        			int[] Asientos_1 = Sala_2D_A.Asiento();
+        			Pintar(N, Asientos_1);
+        			System.out.println("*************************");
+        			Asientos_1=Reservar(N,cantidad_entradas, Asientos_1);
+        			clientes.tipoSala(sala); 
+        			clientes.MontoAdulto(hora);
+        			clientes.MontoNino(hora);
+        			Total = clientes.Total() + Total;
+        			break;
+        		case 2:
+        			N = 40;
+        			Sala2D Sala_2D_B = new Sala2D();
+        			int[] Asientos_2 = Sala_2D_B.Asiento();
+        			Pintar(N, Asientos_2);
+        			System.out.println("*************************");
+        			Asientos_2=Reservar(N,cantidad_entradas, Asientos_2);
+        			clientes.tipoSala(sala); 
+        			clientes.MontoAdulto(hora);
+        			clientes.MontoNino(hora);
+        			Total = clientes.Total() + Total;
+        			break;
+        		case 3:
+        			N = 35;
+        			Sala3D Sala_3D = new Sala3D();
+        			int[] Asientos_3 = Sala_3D.Asiento();
+        			Pintar(N, Asientos_3);
+        			System.out.println("*************************");
+        			Asientos_3=Reservar(N,cantidad_entradas, Asientos_3);
+        			clientes.tipoSala(sala); 
+        			clientes.MontoAdulto(hora);
+        			clientes.MontoNino(hora);
+        			Total = clientes.Total() + Total;
+        			break;
+        		case 4:
+        			N=30;
+        			Sala4DX Sala_4DX = new Sala4DX();
+        			int[] Asientos_4 = Sala_4DX.Asiento();
+					Pintar(N, Asientos_4);
+					System.out.println("*************************");
+					Asientos_4=Reservar(N,cantidad_entradas, Asientos_4);
+					clientes.tipoSala(sala); 
+					clientes.MontoAdulto(hora);
+					clientes.MontoNino(hora);
+					Total = clientes.Total() + Total;
+					break;
+        		case 5:
+        			N=40;
+        			SalaImax Sala_Imax_A = new SalaImax();
+        			int[] Asientos_5 =Sala_Imax_A.Asiento();
+        			Pintar(N, Asientos_5);
+        			System.out.println("*************************");
+        			Asientos_5=Reservar(N,cantidad_entradas, Asientos_5);
+        			clientes.tipoSala(sala); 
+        			clientes.MontoAdulto(hora);
+        			clientes.MontoNino(hora);
+        			Total = clientes.Total() + Total;
+        			break;
+        		case 6:
+        			N =40;
+        			SalaImax Sala_Imax_B = new SalaImax();
+        			int[] Asientos_6 = Sala_Imax_B.Asiento();
+        			Pintar(N, Asientos_6);
+					System.out.println("*************************");
+					Asientos_6=Reservar(N,cantidad_entradas, Asientos_6);
+					hora = Integer.parseInt(horario[0].substring(0, 2));
+					clientes.tipoSala(sala); 
+					clientes.MontoAdulto(hora);
+					clientes.MontoNino(hora);
+					Total = clientes.Total() + Total;
+					break;
+				}
+        	}
+		
+		
+		
+		
+	}
+	
+	public static void Pintar(int cantidad_sala, int[] asiento) {
+		int fila = 0;
+		switch (cantidad_sala){
+        
+    	case 40:
+    		fila = 8;
+    		break;
+    	case 35:
+    		fila = 7;
+    		break;
+    	case 30:
+    		fila = 6;
+    		}
+		
+		int contador =0; //este sera el numero que la persona
+		//vera en la pantalla para ver los asientos disponibles
+		
+				for(int i = 0; i<fila; i++) {//para ver las filas
+					for(int j = 0; j<4; j++) {
+						//segundo for para las columnas 
+						//excapto para la ultima, que ya la ultima debe
+						//cortar mas a la fila que sigue.
+						if (contador <10) {
+							//Esta condicion es solo para que
+							//se pueda ver mas cuadrado el conjunto
+							//completo en pantalla
+							contador++; 
+							if (asiento[(contador-1)]==0) {
+								//verifico si este asiento ya se encuentra 
+								//reservado y si lo esta coloco una R.
+								System.out.print("R"+"   ");
+								}
+								else { 
+								//Si no esta reservado coloco el contador
+							System.out.print(contador+"   ");		
+							}
+							//ahora procedo a realizar lo mismo
+							//para cuando el contador es mayor 
+							//o igual a 10.
+						} else {
+							contador++;
+							if (asiento[(contador-1)]==0) {
+								//como solo coloco un caracter (R) le doy mas 
+								//espacios, tal como arriba.
+								System.out.print("R"+"   ");
+								} 
+							else {
+								//fijese que solo tiene menos espacio.
+							System.out.print(contador +"  ");
+								}
+						}
+					}
+					//esta parte es depues del primer for y se realiza para
+					//completar la ultima columna, asi los numeros siguientes 
+					//apareceran en la fila que sigue.
+					contador++;
+					if (asiento[(contador-1)]==0) {
+						System.out.println("R"+" ");
+						
+					} 	else {
+						System.out.println(contador+"  ");
+						
+						}
+						
+				}
+				
+		}
+	
+	public static int[] Reservar(int cantidad_sala, int entradas, int asiento[]) {
+		Scanner entrada = new Scanner(System.in);
+		int contador;
+		int fila=0;
+		int contador_2=0;
+		int acumulador=0;
+		
+		switch (cantidad_sala){
+        
+        	case 40:
+        		fila = 8;
+        		break;
+        	case 35:
+        		fila = 7;
+        		break;
+        	case 30:
+        		fila = 6;
+        		}
+		
+		for (int i=0; i<(fila*5); i++) {
+			acumulador+=asiento[i];
+		}
+		
+		System.out.println("*************************");
+		System.out.println("bienvendos en esta sala se encuentran disponibles  "
+				+ acumulador+ " entradas");
+		
+								
+			do {
+				contador=0;
+			
+			System.out.println("Ingrese el asiento que desea reservar :");
+			int reserva = entrada.nextInt();
+			
+			for(int i = 0; i<fila; i++) {
+				for(int j = 0; j<4; j++) {
+					if (contador <10) {
+						contador++;
+							if (contador == reserva || asiento[(contador-1)]==0) {
+								System.out.print("R"+"    ");
+								asiento[(contador-1)]=0;
+								}
+							else {
+								System.out.print(contador+"   ");		
+								}
+					}
+					if (contador >=10) {
+						contador++;
+							if (contador == reserva || asiento[(contador-1)]==0) {
+								System.out.print("R"+"   ");
+								asiento[(contador-1)]=0;
+																} 
+							else {
+								System.out.print(contador +"  ");
+								}
+							}
+					}
+				contador++;
+				if (contador == reserva || asiento[(contador-1)]==0) {
+					System.out.println("R"+" ");
+					asiento[(contador-1)]=0;
+										
+				} 	else {
+					System.out.println(contador+"  ");
+					
+					}
+			}
+			contador_2++;		
+		}while(contador_2 <entradas);
+			
+			entrada.nextLine(); 
+			return asiento;
+								
+	}
+	
+}
+

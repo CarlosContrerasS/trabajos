@@ -1,0 +1,46 @@
+First Line:
+
+tres tipos de vehículos: 
+-Kromis  3L hacia abajo (3, letra K)  ,   3 puntos en el blanco , 10 puntos destruida.
+-Caguanos 2L de ancho confetis y dulces (5, letra C),   2 puntos en el blanco,  7 puntos destruida.
+-Trupallas 1L (10, letra T)  , 1 punto en el blanco. 0 puntos destruida.
+se marca con H al lanzar huevo.
+
+total puntaje usuario.
+
+Matriz 15x15
+asignación aleatoria de vehículos, sin caer encima del otro
+
+
+
+Superclase Carro: administra vehiculos
+Q ocupantes
+fecha ingreso a la institución
+ubicación en tablero
+Desplegar datos()
+
+
+Clase Kromi:
+año fabricacion
+marca
+
+Clase Caguano:
+alcance de tiro
+color confeti
+
+
+Clase Trupalla:
+nivel de armadura 1-5
+nombre conductor
+
+Clase Tablero:
+arreglo con instancia clase carros máximo 18 elementos
+lista instancias huevos sin limite elementos.
+
+Clase Huevo:
+todos los lanzamientos del realizados en el tablero.
+
+Crear Carro()
+lanzar huevo() solicita coordenada lanzamiento + asignar puntaje al acierto + almacena la jugada
+mostrar matriz() muestra tablero con Hs + total de intentos al momento + total puntaje acumulado.
+calcular puntaje () suma de puntaje de todos los H, visible solo dentro de la clase.

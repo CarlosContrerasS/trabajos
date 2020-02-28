@@ -1,0 +1,35 @@
+package Prueba;
+
+public class Tablero {
+
+	public static void main(String[] args) {
+		
+		int fila =(int) (Math.random()*15+1);
+		int  columna = (int) (Math.random()*15+1);
+		
+		System.out.println(fila);
+		System.out.println(columna);
+		
+
+	}
+	
+	public void CrearCarro() {
+		
+		
+	}
+	
+	public void LanzarHuevo() {
+		
+	}
+	
+	public void MostrarMatriz() {
+		
+	}
+	
+	public int CalcularPuntaje() {
+		int puntaje=0;
+		
+		return puntaje;
+	}
+
+}

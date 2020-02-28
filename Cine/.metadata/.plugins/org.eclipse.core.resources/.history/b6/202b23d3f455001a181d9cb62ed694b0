@@ -1,0 +1,201 @@
+package cine;
+import java.util.Scanner;
+
+public class Cartelera {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		String Peliculas[]= {"El Exorcista", "La mano que aprieta",
+				"Como perder a un awaker en 10 días", "Rapido y Sin Furia 10", 
+				"Martes 13 todos los martes", "Armagedon capitulo final"};
+		
+		String [] Seleccion = cartelera(Peliculas);
+		System.out.println(Seleccion[0]);
+		
+		int horario = horario();
+
+	}
+	
+	public static String[] cartelera(String[] Peliculas) {
+		String pelicula ="";
+		String horario ="";
+		Boolean test= true;		
+		Scanner entrada = new Scanner(System.in);
+	
+		
+		while(test != false) {
+				System.out.println("************************************"
+					+"\n"+" Bienvedidos, el día de hoy tenemos las siguientes peliculas:"
+					+"\n"+"1 : "+Peliculas[0] + "\n"+"2 : "+Peliculas[1]
+					+"\n" + "3 : "+Peliculas[2]+"\n" + "4 : "+Peliculas[3]
+					+"\n" + "5 : "+Peliculas[4]+"\n" + "6 : "+Peliculas[5]
+					+"\n" +"Escoga una opción por favor: " );
+		
+			int Opcion_1 = entrada.nextInt();
+		
+			switch (Opcion_1) {
+				case 1:
+					test = false;
+					horario = "1";
+					pelicula =Peliculas[0];
+					System.out.println("seleccionaste pelicula: " +Peliculas[0]);
+					break;
+				case 2:
+					test = false;
+					horario = "2";
+					System.out.println("seleccionaste pelicula: " +Peliculas[1]);
+					pelicula =Peliculas[1];
+					break;
+					
+				case 3:
+					test = false;
+					horario = "3";
+					System.out.println("seleccionaste pelicula: " +Peliculas[2]);
+					pelicula =Peliculas[2];
+					break;
+					
+				case 4:
+					test = false;
+					horario = "4";
+					System.out.println("seleccionaste pelicula: " +Peliculas[3]);
+					pelicula =Peliculas[3];
+					break;
+					
+				case 5:
+					test = false;
+					horario = "5";
+					System.out.println("seleccionaste pelicula: " +Peliculas[4]);
+					pelicula =Peliculas[4];
+					break;
+					
+				case 6:
+					test = false;
+					horario = "6";
+					System.out.println("seleccionaste pelicula: " +Peliculas[5]);
+					pelicula =Peliculas[5];
+					break;
+			
+				default:
+					System.out.println("seleccionaste una pelicula que no existe. Elige nuevamente");
+					test = true;
+					break;
+				}
+			}
+		
+		String vector_seleccion[] = {pelicula, horario};
+		return vector_seleccion;
+
+		}
+	
+	public static int horario(int Peliculas) {
+		int seleccion = 0;
+		Boolean test= true;	
+		Scanner entrada = new Scanner(System.in);
+		
+		while(test != false) {
+			
+	
+		switch (Peliculas) {
+			case 1:
+				test = false;
+				int Horarios[]= {12, 15, 18, 21};
+				
+				System.out.println("************************************"
+						+"\n"+" Bienvedidos, la pelicula selecionada se encuentra en los siguientes horarios:"
+						+"\n"+"1 : "+Horarios[0] + "\n"+"2 : "+Horarios[1]
+						+"\n" + "3 : "+Horarios[2]+"\n" + "4 : "+Horarios[3]
+						+"\n" +"Escoga una opción por favor: " );
+				
+				int Opcion = entrada.nextInt();
+				switch (Opcion) {
+				
+				case 1:
+					System.out.println("ha selecionado a las " +Horarios[0]);
+					seleccion = Horarios[0];
+					break;
+				case 2:
+					test = false;
+					horario = 2;
+					System.out.println("seleccionaste pelicula: " +Peliculas[1]);
+					pelicula =Peliculas[1];
+					break;
+					
+				case 3:
+					test = false;
+					horario = 3;
+					System.out.println("seleccionaste pelicula: " +Peliculas[2]);
+					pelicula =Peliculas[2];
+					break;
+					
+				case 4:
+					test = false;
+					horario = 4;
+					System.out.println("seleccionaste pelicula: " +Peliculas[3]);
+					pelicula =Peliculas[3];
+					break;
+					
+				case 5:
+					test = false;
+					horario = 5;
+					System.out.println("seleccionaste pelicula: " +Peliculas[4]);
+					pelicula =Peliculas[4];
+					break;
+					
+				default:
+					System.out.println("seleccionaste una pelicula que no existe. Elige nuevamente");
+					test = true;
+					break;
+				}
+				
+				
+				System.out.println("El horario selecionado es : " +Opcion);
+				break;
+			case 2:
+				test = false;
+				horario = 2;
+				System.out.println("seleccionaste pelicula: " +Peliculas[1]);
+				pelicula =Peliculas[1];
+				break;
+				
+			case 3:
+				test = false;
+				horario = 3;
+				System.out.println("seleccionaste pelicula: " +Peliculas[2]);
+				pelicula =Peliculas[2];
+				break;
+				
+			case 4:
+				test = false;
+				horario = 4;
+				System.out.println("seleccionaste pelicula: " +Peliculas[3]);
+				pelicula =Peliculas[3];
+				break;
+				
+			case 5:
+				test = false;
+				horario = 5;
+				System.out.println("seleccionaste pelicula: " +Peliculas[4]);
+				pelicula =Peliculas[4];
+				break;
+				
+			case 6:
+				test = false;
+				horario = 6;
+				System.out.println("seleccionaste pelicula: " +Peliculas[5]);
+				pelicula =Peliculas[5];
+				break;
+		
+			default:
+				System.out.println("seleccionaste una pelicula que no existe. Elige nuevamente");
+				test = true;
+				break;
+			}
+		}
+		
+	
+	
+	
+		return seleccion;
+	}
+}

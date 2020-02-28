@@ -1,0 +1,69 @@
+package Prueba;
+
+public class Tablero {
+
+	public static void main(String[] args) {
+		int contador =0;
+		int fila =(int) (Math.random()*15+1);
+		int  columna = (int) (Math.random()*15+1);
+		
+		System.out.println(fila);
+		System.out.println(columna);
+		
+		 //este sera el numero que la persona
+		//vera en la pantalla para ver los asientos disponibles
+		
+				for(int i = 0; i<15; i++) {//para ver las filas
+					for(int j = 0; j<14; j++) {
+						//segundo for para las columnas 
+						//excapto para la ultima, que ya la ultima debe
+						//cortar mas a la fila que sigue.
+						if (contador <10) {
+							//Esta condicion es solo para que
+							//se pueda ver mas cuadrado el conjunto
+							//completo en pantalla
+							contador++; 
+							System.out.print(contador+"   ");		
+							}
+							//ahora procedo a realizar lo mismo
+							//para cuando el contador es mayor 
+							//o igual a 10.
+						 else {
+							contador++;
+							//fijese que solo tiene menos espacio.
+							System.out.print(contador +"  ");
+								}
+						}
+					
+					//esta parte es depues del primer for y se realiza para
+					//completar la ultima columna, asi los numeros siguientes 
+					//apareceran en la fila que sigue.
+						contador++;
+						System.out.println(contador+"  ");
+						
+						}
+						
+			}
+
+	
+	
+	public void CrearCarro() {
+		
+		
+	}
+	
+	public void LanzarHuevo() {
+		
+	}
+	
+	public void MostrarMatriz() {
+		
+	}
+	
+	public int CalcularPuntaje() {
+		int puntaje=0;
+		
+		return puntaje;
+	}
+
+}

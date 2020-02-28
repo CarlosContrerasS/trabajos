@@ -1,0 +1,58 @@
+package Prueba;
+
+public class Huevo {
+	private int lanzamiento;
+	private int fila;
+	private int columna; 
+	private int puntaje;
+	private int[] posicion = new int[2];
+	
+	public Huevo(int lanzamiento, int puntaje, int[] posicion) {
+		super();
+		this.lanzamiento = lanzamiento;
+		this.posicion = posicion;
+		this.puntaje = puntaje;
+	}
+	public int getLanzamiento() {
+		return lanzamiento;
+	}
+	public void setLanzamiento(int lanzamiento) {
+		this.lanzamiento = lanzamiento;
+	}
+	
+	public int getPuntaje() {
+		return puntaje;
+	}
+	public void setPuntaje(int puntaje) {
+		this.puntaje = puntaje;
+	}
+	
+	public int getFila() {
+		return posicion[0];
+	}
+
+	public void setFila(int valor) {
+		posicion[0]=valor;
+	}
+
+	public int getColumna() {
+		return posicion[1];
+	}
+
+	public void setColumna(int valor) {
+		posicion[1]=valor;
+	}
+
+	public int[] getPosicion( ) {
+		 posicion[0]=fila;
+		 posicion[1]=columna;
+		 return posicion;
+	} 
+
+	public void setPosicion(int fila, int columna) {
+		posicion[0]=fila;
+		posicion[1]=columna;
+	}
+	
+	
+}

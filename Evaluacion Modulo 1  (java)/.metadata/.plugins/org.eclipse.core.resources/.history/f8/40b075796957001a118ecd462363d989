@@ -1,0 +1,52 @@
+package Prueba;
+
+public class Kromi extends Carro {
+	private int anoFabricacion;
+	private String marca;
+	private int [] Arreglo_Kromi= new int[3]; //para la posicion en el tablero
+	
+	public Kromi(int cantOcupantes, int fechaIng, int [] posicion, int anoFabricacion, String marca) {
+		super(cantOcupantes, fechaIng, posicion);
+		this.anoFabricacion = anoFabricacion;
+		this.marca = marca;
+	}
+		
+	public Kromi() {
+		
+	}
+	
+	public void Arreglo_Kromi() {
+		for(int i=0; i<3;i++) {
+			setArreglo_Kromi(i, 1);
+		}
+		
+	}
+	
+	public int getAnoFabricacion() {
+		return anoFabricacion;
+	}
+	public void setAnoFabricacion(int anoFabricacion) {
+		this.anoFabricacion = anoFabricacion;
+	}
+	public String getMarca() {
+		return marca;
+	}
+	public void setMarca(String marca) {
+		this.marca = marca;
+	}
+
+	public int getArreglo_Kromi(int i) {
+		  
+		 return Arreglo_Kromi[i];
+	}
+
+	public void setArreglo_Kromi(int indice, int valor) {
+			Arreglo_Kromi[indice]=valor;
+	}
+	
+	
+	}
+
+
+
+

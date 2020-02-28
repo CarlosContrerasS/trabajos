@@ -1,0 +1,29 @@
+package Prueba;
+
+public class Objeto_Kromi extends Kromi{
+
+	public Objeto_Kromi() {
+		
+	}
+	
+	public Objeto_kromi(int fila, int columna, String K) {//entrega el un arreglo con las fila, columnas y el String que se debe formar
+		super(fila, columna);
+		
+		/*String [][] Vector_Kromi = new String[3][3];
+				
+	*	Vector_Kromi[0][0]=Integer.toString(getFila());
+		*Vector_Kromi[0][1]=Integer.toString(getColumna());
+		*Vector_Kromi[0][2]="K";
+		*Vector_Kromi[1][0]=Integer.toString((getFila()+1));
+		*Vector_Kromi[1][1]=Integer.toString(getColumna());
+		*Vector_Kromi[1][2]="K";
+		*Vector_Kromi[2][0]=Integer.toString((getFila()+2));
+		*Vector_Kromi[2][1]=Integer.toString(getColumna());
+		*Vector_Kromi[2][2]="K";
+		
+		*return Vector_Kromi;*/
+		}
+	}
+
+
+}

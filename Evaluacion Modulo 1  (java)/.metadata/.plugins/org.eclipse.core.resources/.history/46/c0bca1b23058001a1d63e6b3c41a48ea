@@ -1,0 +1,73 @@
+package Prueba;
+
+public class prueba {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int contador =0;
+		char cont='A';
+		String[][] Matriz = new String [16][16];	
+				
+		for(int i = 0; i<16; i++) {
+			for(int j = 0; j<15; j++) {
+				
+				if(i==0 && j==0 ) {
+					Matriz[0][0]=("   ");
+				}
+				else if(i==0  ) {
+					Matriz[j][0]=("  "+Character.toString(cont) +"  ");
+					cont++;
+					
+				}
+				
+				if (j==0 && contador <10) {
+					
+					
+					Matriz[0][i]=(" 0"+Integer.toString(contador)+"  ");
+					contador++;
+					}else if (j==0) {
+					
+					Matriz[0][i]=(" "+Integer.toString(contador)+"  ");
+					contador++;
+				}
+					
+								
+				else if(i>0) {
+					
+					Matriz[j][i]=("[   ]");
+				}
+			}
+			if(i==0) {
+				Matriz[15][0]=("  "+Character.toString(cont));
+			}
+			else
+				
+			Matriz[15][i]=("[   ]");
+		}
+		
+	
+		
+		for(int i = 0; i<16; i++) {
+			for(int j=0; j<15; j++) {
+				System.out.print(Matriz[j][i]+"  ");
+			}
+			System.out.println(Matriz[15][i]);
+		}
+		
+		Matriz[4][3]="[ H ]";
+		
+						
+		System.out.println(" \n");
+		
+		for(int i = 0; i<16; i++) {
+			for(int j = 0; j<15; j++) {
+				System.out.print(Matriz[j][i]+" \t");
+			}
+			System.out.println("  "+Matriz[15][i]+"   ");
+		}
+		
+	}
+	
+
+}

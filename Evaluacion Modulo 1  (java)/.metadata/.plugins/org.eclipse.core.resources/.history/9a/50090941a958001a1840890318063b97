@@ -1,0 +1,66 @@
+package Prueba;
+
+public class Prueba {
+
+	public static void main(String[] args) {
+		
+		int contador =0;
+		char Cont='A';
+		String[][] Matriz = new String [16][16];	
+		
+		//Para llenar la Matriz inicial.
+				
+		for(int j = 0; j<16; j++) {//eje y (vertical)
+			for(int i = 0; i<16; i++) {//eje x (horizontal)
+				
+				if (i==0 && j==0) { //posicion (0,0) se da un espacio
+					Matriz[0][0]=("  ");
+					}
+				else if(j==0 && i>0 ) { //Para el eje horizontal, colocamos letras de A hasta la O
+					Matriz[i][0]=("  "+Character.toString(Cont)); //transformamos el caracter en String
+					Cont++;
+					}
+				else if(i==0 && j>0 ) {//Para el eje vertical, colocamos numeros de 1 a 15.
+						if (contador <9) {//esta parte es para que tenga el mismo ancho los 
+										 // numeros menores que 10.(recuerde que se incrementa
+										// que se imprime.
+							contador++;
+							Matriz[0][j]=("  "+Integer.toString(contador));					
+							}
+						else {// los numeros mayores de 10.
+						contador++;
+						Matriz[0][j]=(" "+Integer.toString(contador));
+						}
+				}
+				else //Esta parte rellena lo que no esta en los ejes.
+				
+					Matriz[j][i]=("[   ]");
+				}
+			}
+	
+		//Para mostras la matriz
+		for(int i = 0; i<16; i++) { //eje y (vertical)
+			for(int j=0; j<15; j++) { //eje x (Horizontal)
+				System.out.print(Matriz[j][i]+"  \t"); //imrimo en todo menos la ultima columna
+			}
+			System.out.println(Matriz[15][i]); //imprimo con salto de linea la ultima columna.
+		}
+		
+		//esto es solo una muestra de como llenar con un elemento la matriz.
+		Matriz[4][3]="[ H ]"; //Se coloca una H en la posición D y 3.
+		
+						
+		System.out.println(" \n");
+		
+		//Para ver la matriz con el cambio realizado.
+		for(int i = 0; i<16; i++) {
+			for(int j = 0; j<15; j++) {
+				System.out.print(Matriz[j][i]+" \t");
+			}
+			System.out.println("  "+Matriz[15][i]+" \t  ");
+		}
+		
+	}
+	
+
+}

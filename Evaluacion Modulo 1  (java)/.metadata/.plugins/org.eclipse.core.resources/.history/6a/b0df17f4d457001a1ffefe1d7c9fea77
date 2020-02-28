@@ -1,0 +1,9 @@
+package Prueba;
+
+public class Objeto_Kromi {
+
+	public Objeto_Kromi() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

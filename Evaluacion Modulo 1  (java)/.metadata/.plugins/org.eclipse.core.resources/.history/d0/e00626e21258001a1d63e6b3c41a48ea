@@ -1,0 +1,135 @@
+package Prueba;
+import java.util.ArrayList;
+
+public class Tablero {
+
+	public static void main(String[] args) {
+		
+		int fila =(int) (Math.random()*15+1);
+		int  columna = (int) (Math.random()*15+1);
+		
+		System.out.println(fila);
+		System.out.println(columna);
+		
+		MostrarMatriz();
+		
+		CrearCarro();
+		
+				
+				
+				//for(int i =0; i<2;i++) {
+					//System.out.println(cag.getMatriz_Caguano(i));
+				}
+						
+			//}
+
+	
+	
+	public static void CrearCarro() {
+				
+		Kromi krom1 = new Kromi();
+		
+		//ArrayList <Kromi> = new ArrayList<Kromi>();
+		
+		Kromi krom2 = new Kromi();
+		krom2.Arreglo_Kromi();
+		
+		Kromi krom3 = new Kromi();
+		krom3.Arreglo_Kromi();
+		
+		Caguano cag1 = new Caguano();
+		String [][]Matriz_Caguano = cag1.Objet_Caguano();
+		//cag1.Matriz_Caguano();
+		
+		for(int i = 0; i<3;i++) {
+			for(int j=0; j<2; j++) {
+				System.out.print(Matriz_Caguano[i][j]);
+			}
+		}
+		
+		Caguano cag2 = new Caguano();
+		//cag2.Matriz_Caguano();
+		
+		Caguano cag3 = new Caguano();
+		//cag3.Matriz_Caguano();
+		
+		Caguano cag4 = new Caguano();
+		//cag4.Matriz_Caguano();
+		
+		Caguano cag5 = new Caguano();
+		//cag5.Matriz_Caguano();
+		
+		
+		Trupalla tru1 = new Trupalla();
+		
+		Trupalla tru2 = new Trupalla();
+		
+		Trupalla tru3 = new Trupalla();
+		
+		Trupalla tru4 = new Trupalla();
+		
+		Trupalla tru5 = new Trupalla();
+		
+		Trupalla tru6 = new Trupalla();
+		
+		Trupalla tru7 = new Trupalla();
+		
+		Trupalla tru8 = new Trupalla();
+		
+		Trupalla tru9 = new Trupalla();
+		
+		Trupalla tru10 = new Trupalla();
+		
+		
+	}
+	
+	public void LanzarHuevo() {
+		
+	}
+	
+	public static void MostrarMatriz() {
+		int contador =0;
+		char cont='A';
+		
+		for(int i = 0; i<15; i++) {
+			for(int j = 0; j<14; j++) {
+				if (j==0) {
+					System.out.print( cont+" ");	
+					cont++;
+				} 
+				if(i==0) {
+					if (contador <10) { 
+						contador++; 
+						System.out.print("  "+contador+"  ");
+						}
+					else if (contador <15) {
+						contador++; 
+						System.out.print(" "+contador+"  ");		
+						}
+					}
+				
+				 else {
+					
+					System.out.print("[   ]");
+				 }
+			}
+				if (i==0) {
+					contador++;
+					System.out.println(contador+"  ");
+				} 
+				else {
+				contador++;
+				System.out.println("[   ]");
+				}
+		}
+		
+		
+	}
+	
+	public int CalcularPuntaje() {
+		int puntaje=0;
+		
+		return puntaje;
+	}
+
+}
