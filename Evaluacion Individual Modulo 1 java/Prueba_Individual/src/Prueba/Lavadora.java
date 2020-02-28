@@ -1,60 +1,58 @@
 package Prueba;
 
 public class Lavadora extends Electrodomesticos {
-	private int carga = 5;
+	//CONSTANTE
+	private final int CARGA_REF =5;
+	
+	//VARIABLES
+	private int carga;
 
-	public Lavadora(double precio, String color, char ConsumoEnergetico,int peso) {
+	public Lavadora(double precio, String color, char ConsumoEnergetico,int peso, int carga) {
 		super(precio, color, ConsumoEnergetico, peso);
+		this.carga = carga;
+		
+	}
+
+		//Constructor por defecto con los valores de las constantes.
+	public Lavadora(int PESO_REF, String COLOR_REF, char CONSUMO_REF, int CARGA_REF, double PRECIO_BASE) {
+		
+		//Estas CONSTANTES Provienen de la clase padre
+		super(PRECIO_BASE, CONSUMO_REF, PESO_REF, COLOR_REF);
+		
+		//varible que se ingresa solo en esta clase.
+		this.carga = this.CARGA_REF;
+		
 		
 	}
 	
-	public Lavadora() {
-		
-	}
+	//Constructor con ingreso de peso y precio y el resto de los valores son 
+	//por defecto con los valores de las constantes.
 	
-	public Lavadora(int peso, int precio) {
+	public Lavadora(int precio,  String COLOR_REF, char CONSUMO_REF, 
+			int peso, int CARGA_REF ) {
+		//Estas CONSTANTES Provienen de la clase padre
+		super(precio, COLOR_REF, CONSUMO_REF, peso);
+		
+		//varible que se ingresa solo en esta clase.
+		this.carga=CARGA_REF;
+		
 		
 	}
 
 	public void precioFinal() {
 		
-		//verificamos por el consumo.
-		if(getConsumoEnergetico()=='A') {
-			setPrecio(getPrecio()+100);
-		}
-		if(getConsumoEnergetico()=='B') {
-			setPrecio(getPrecio()+80);
-		}
-		if(getConsumoEnergetico()=='C') {
-			setPrecio(getPrecio()+60);
-		}
-		if(getConsumoEnergetico()=='D') {
+		//Agregamos los valores y las condiciones de Electrodomesticos
+		super.precioFinal();
+		
+		//Agregamos la condicion de peso mayor a 30 kg
+		
+		if (getCarga() > 30) {
 			setPrecio(getPrecio()+50);
 		}
-		if(getConsumoEnergetico()=='E') {
-			setPrecio(getPrecio()+30);
-		}
-		if(getConsumoEnergetico()=='F') {
-			setPrecio(getPrecio()+10);
-		}
 		
-		//verificamos por el peso o carga
-		if(getPeso()>=80) {
-			setPrecio(getPrecio()+100);
-		}else 
-			if(getPeso()>=50) {
-			setPrecio(getPrecio()+80);
-		} else
-			if(getPeso()>=30) {
-			setPrecio(getPrecio()+80);
-			} if(getPeso()>=20) {
-				setPrecio(getPrecio()+50);
-				} else
-					if(getPeso()<=19) {
-				setPrecio(getPrecio()+10);
-			}
+
 	}
-	
+
 	public int getCarga() {
 		return carga;
 	}
@@ -62,7 +60,4 @@ public class Lavadora extends Electrodomesticos {
 	public void setCarga(int carga) {
 		this.carga = carga;
 	}
-	
-	
-
 }

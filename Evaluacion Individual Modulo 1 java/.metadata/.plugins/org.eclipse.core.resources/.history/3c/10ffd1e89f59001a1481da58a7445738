@@ -1,0 +1,9 @@
+package Prueba_individual;
+
+public class Electrodomesticos {
+
+	public Electrodomesticos() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

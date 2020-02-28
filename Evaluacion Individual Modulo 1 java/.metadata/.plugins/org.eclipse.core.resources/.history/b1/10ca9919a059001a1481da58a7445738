@@ -1,0 +1,19 @@
+package Prueba_individual;
+
+public class Electrodomesticos {
+	private int precioBase;
+	private String color;
+	private String ConsumoEnergeticoA;
+	private String ConsumoEnergeticoB;
+	private String ConsumoEnergeticoC;
+	private String ConsumoEnergeticoD;
+	private String ConsumoEnergeticoE;
+	private String ConsumoEnergeticoF;
+	private int peso;
+	
+	
+	public Electrodomesticos() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

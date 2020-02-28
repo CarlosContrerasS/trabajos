@@ -1,0 +1,14 @@
+package Prueba_individual;
+
+public class Electrodomesticos {
+	private int precioBase;
+	private String color = "Blanco";
+	private String [] ConsumoEnergetico = {"A", "B", "C", "D", "E", "F"};
+	private int peso;
+	
+	
+	public Electrodomesticos(int precioBase, String color, ) {
+
+	}
+
+}

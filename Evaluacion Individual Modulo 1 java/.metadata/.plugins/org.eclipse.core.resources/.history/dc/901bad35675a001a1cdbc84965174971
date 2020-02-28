@@ -1,0 +1,49 @@
+package Prueba;
+
+public class Lavadora extends Electrodomesticos {
+	
+	private final int CARGA_REF =5;
+	private int carga;
+
+	public Lavadora(double precio, String color, char ConsumoEnergetico,int peso, int carga) {
+		super(precio, color, ConsumoEnergetico, peso);
+		this.carga = carga;
+		
+	}
+	
+	public Lavadora() {
+		
+	}
+	
+	public Lavadora(int peso, int precio) {
+		
+	}
+
+	public void precioFinal() {
+		
+		//Agregamos los valores y las condiciones de Electrodomesticos
+		super.precioFinal();
+		
+		//Agregamos la condicion de peso mayor a 30 kg
+		
+		if (getCarga() > 30) {
+			setPrecio(getPrecio()+50);
+		}
+		
+
+	}
+
+	public int getCarga() {
+		return carga;
+	}
+
+	public void setCarga(int carga) {
+		this.carga = carga;
+	}
+
+	
+
+	
+	
+
+}

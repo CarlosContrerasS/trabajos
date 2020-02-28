@@ -1,0 +1,40 @@
+/**
+ * 
+ */
+package Prueba_individual;
+
+/**
+ * @author Carlos Contreras
+ *
+ */
+public class MainElectrodomesticos {
+
+	
+	public static void main(String[] args) {
+		
+		Electrodomesticos[] ArrayElec_1 = new Electrodomesticos[10];
+		
+		//Electrodomesticos precio, color, ConsumoEnergetico y peso
+		
+		//Lavadora precio, color, ConsumoEnergetico y peso)
+		
+		//Television resolucion, sintonizador, precio, color, consumoEnergetico y  peso
+		
+		// Color las posibilidades son: blanco, negro, rojo, azul y gris. 
+		
+		ArrayElec_1 [0] = new Electrodomesticos(150, "rojo",'A', 60);
+		ArrayElec_1 [1] = new Electrodomesticos(150, "rojo",'A', 60);
+		ArrayElec_1 [2] = new Electrodomesticos(150, "rojo",'A', 60);
+		ArrayElec_1 [3] = new Lavadora (150, "rojo",'A', 60);
+		ArrayElec_1 [4] = new Lavadora(150, "rojo",'A', 60);
+		ArrayElec_1 [5] = new Lavadora(150, "rojo",'A', 60);
+		ArrayElec_1 [6] = new Lavadora(150, "rojo",'A', 60);
+		ArrayElec_1 [7] = new Television(40, true, 150, "rojo",'A', 60);
+		ArrayElec_1 [8] = new Television(40, true, 150, "rojo",'A', 60);
+		ArrayElec_1 [9] = new Television(40, true, 150, "rojo",'A', 60);
+		
+		
+		System.out.println(ArrayElec_1[9].getPrecio());
+	}
+
+}

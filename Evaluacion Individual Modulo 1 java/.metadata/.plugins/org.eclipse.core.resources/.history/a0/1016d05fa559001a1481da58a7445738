@@ -1,0 +1,9 @@
+package Prueba_individual;
+
+public class Lavadora {
+
+	public Lavadora() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

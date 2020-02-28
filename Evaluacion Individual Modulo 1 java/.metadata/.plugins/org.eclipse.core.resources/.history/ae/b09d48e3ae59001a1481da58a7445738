@@ -1,0 +1,27 @@
+/**
+ * 
+ */
+package Prueba_individual;
+
+/**
+ * @author Carlos Contreras
+ *
+ */
+public class MainElectrodomesticos {
+
+	
+	public static void main(String[] args) {
+		
+		Electrodomesticos[] ArrayElecParaPobar = new Electrodomesticos[10];
+		
+		//Electrodomesticos precio, color, ConsumoEnergetico y peso
+		
+		//Lavadora precio, color, ConsumoEnergetico, peso y int carga)
+		
+		//Television resolucion, sintonizador, precio, color, consumoEnergetico y  peso
+		
+		ArrayElecParaPobar [0] = new electrodomesticos()
+		
+	}
+
+}

@@ -1,0 +1,55 @@
+package Prueba_individual;
+
+public class Television extends Electrodomesticos{
+	
+	private int resolucion=20;
+	private Boolean sintonizador=false;
+
+	public Television() {
+	
+	}
+	
+	public Television(int precio, int peso) {
+		super(precio, peso);
+		
+	}
+	
+	public Television(int resolucion, Boolean sintonizador, 
+			int precio, String color, char ConsumoEnergetico,int peso) {
+		
+		this.resolucion=resolucion;
+		this.sintonizador=sintonizador;
+		super(precio, color, ConsumoEnergetico, peso);
+	}
+	
+	
+	public void precioFinal() {
+		if (getResolucion()>40) {
+			setPrecio(getPrecio()*1.3);
+		}
+			
+		/*	si tiene una resolución mayor de 40 pulgadas, se incrementara el precio un 30% 
+			y si tiene un sintonizador TDT incorporado, aumentara 50 €. Recuerda que las condiciones que 
+			hemos visto en la clase Electrodoméstico también deben afectar al precio.*/
+	}
+
+	public int getResolucion() {
+		return resolucion;
+	}
+
+	public void setResolucion(int resolucion) {
+		this.resolucion = resolucion;
+	}
+
+	public Boolean getSintonizador() {
+		return sintonizador;
+	}
+
+	public void setSintonizador(Boolean sintonizador) {
+		this.sintonizador = sintonizador;
+	}
+	
+	
+
+}
+

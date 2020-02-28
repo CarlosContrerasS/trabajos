@@ -1,0 +1,75 @@
+/**
+ * 
+ */
+package Prueba_individual;
+
+/**
+ * @author Carlos Contreras
+ *
+ */
+public class MainElectrodomesticos {
+
+	
+	public static void main(String[] args) {
+		
+		Electrodomesticos[] ArrayElec = new Electrodomesticos[10];
+		
+		//Debemos Recordar como fueron creados los constructores.
+		
+		// Las posibilidades de color son: blanco, negro, rojo, azul y gris.
+		// Las posibilidades de Consumo Energetico Son: "A", "B", "C", "D", "E" y"F"
+		
+		//Electrodomesticos precio, color, ConsumoEnergetico y peso
+		ArrayElec [0] = new Electrodomesticos(50, "rojo",'A', 30);
+		ArrayElec[0].precioFinal(); //Para realizar los cambio de precio por peso 
+		//y consumo energetico.
+		
+		ArrayElec [1] = new Electrodomesticos(250, "negro",'B', 80);
+		ArrayElec [1].precioFinal();
+		
+		ArrayElec [2] = new Electrodomesticos(150, "blanco",'D', 100);
+		ArrayElec [2].precioFinal();
+		
+		
+		//Television resolucion, sintonizador, precio, color, consumoEnergetico y  peso
+		
+		//creamos 3 Televisores.
+		
+		ArrayElec [3] = new Television(10, true, 30, "negro",'C', 10);
+		ArrayElec [3].precioFinal();
+		
+		ArrayElec [4] = new Television(20, false, 50, "azul",'A', 20);
+		ArrayElec [4].precioFinal();
+		
+		ArrayElec [5] = new Television(40, true, 80, "negro",'B', 30);
+		ArrayElec [5].precioFinal();
+		
+		
+		
+		
+		//Lavadora precio, color, ConsumoEnergetico y peso)
+		
+		//Creamos 4 Lavadoras.
+		
+		ArrayElec [6] = new Lavadora (100, "blanco",'A', 40);
+		ArrayElec [2].precioFinal();
+		
+		ArrayElec [7] = new Lavadora(50, "negro",'A', 35);
+		ArrayElec [2].precioFinal();
+		
+		ArrayElec [8] = new Lavadora(80, "blanco",'A', 60);
+		ArrayElec [2].precioFinal();
+		
+		ArrayElec [9] = new Lavadora(200, "gris",'A', 100);
+		ArrayElec [2].precioFinal();
+		
+		
+		
+		
+		
+		
+		
+		System.out.println(ArrayElec[3].getPrecio());
+	}
+
+}

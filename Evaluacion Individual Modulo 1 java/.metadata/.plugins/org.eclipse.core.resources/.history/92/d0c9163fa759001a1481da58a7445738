@@ -1,0 +1,70 @@
+package Prueba_individual;
+
+public class Lavadora extends Electrodomesticos {
+	private int carga = 5;
+
+	public Lavadora(int precioBase, String color, char ConsumoEnergetico,int peso, int carga) {
+		super(precioBase, color, ConsumoEnergetico, peso);
+		this.carga=carga;
+		
+	}
+	
+	public Lavadora() {
+		
+	}
+	
+	public Lavadora(int peso, int precio) {
+		
+	}
+
+	public void precioFinal() {
+
+		if(getConsumoEnergetico()=='A') {
+			setPrecio(getPrecio()+100);
+		}
+		if(getConsumoEnergetico()=='B') {
+			setPrecio(getPrecio()+80);
+		}
+		if(getConsumoEnergetico()=='C') {
+			setPrecio(getPrecio()+60);
+		}
+		if(getConsumoEnergetico()=='D') {
+			setPrecio(getPrecio()+50);
+		}
+		if(getConsumoEnergetico()=='E') {
+			setPrecio(getPrecio()+30);
+		}
+		if(getConsumoEnergetico()=='F') {
+			setPrecio(getPrecio()+10);
+		}
+		
+		
+		if(getPeso()>=80) {
+			setPrecio(getPrecio()+100);
+		}else 
+			if(getPeso()>=50) {
+			setPrecio(getPrecio()+80);
+		} else
+			if(getPeso()>=30) {
+			setPrecio(getPrecio()+80);
+			} if(getPeso()>=20) {
+				setPrecio(getPrecio()+50);
+				} else
+					if(getPeso()<=19) {
+				setPrecio(getPrecio()+10);
+			}
+		
+
+		
+	}
+	public int getCarga() {
+		return carga;
+	}
+
+	public void setCarga(int carga) {
+		this.carga = carga;
+	}
+	
+	
+
+}

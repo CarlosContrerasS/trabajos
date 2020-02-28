@@ -1,0 +1,104 @@
+package Prueba_individual;
+
+public class Electrodomesticos {
+	private int precioBase= 100000;
+	private String color; // las posibilidades son: blanco, negro, rojo, azul y gris. 
+	private char ConsumoEnergetico; // {"A", "B", "C", "D", "E", "F"} estas son sus posibilidadces
+	private int peso=5;
+	
+	
+	public Electrodomesticos(int precioBase, String color, char ConsumoEnergetico,int peso) {
+		this.precioBase=precioBase;
+		this.color=color;
+		this.ConsumoEnergetico=ConsumoEnergetico;
+		this.peso=peso;
+		
+
+	}
+	
+	public Electrodomesticos() {
+		
+	}
+	
+	public Electrodomesticos(int precioBase, int precio) {
+		
+	}
+	
+	public void comprobarConsumoEnergetico(char letra) {
+	
+		char[] LetrasPosibles = {'A', 'B', 'C', 'D', 'E', 'F'};
+		
+		for(int i=0; i<6; i++) {
+			if (LetrasPosibles[i]==letra ) {
+				setConsumoEnergetico(letra);
+			}
+			else
+				setConsumoEnergetico('F');
+		}
+		
+		
+	
+	}
+	
+	public void comprobarColor(String color) {
+		
+		String[] VerificarColor = {"blanco", "negro", "rojo", "azul",  "gris"}; 
+		
+		for(int i=0; i<6; i++) {
+			if ( VerificarColor[i]==color ) {
+				setColor(color);
+			}
+			else
+				setColor("blanco");
+		}
+		
+	}
+	
+	public void precioFinal() {
+		
+		
+	}
+
+
+	public int getPrecioBase() {
+		return precioBase;
+	}
+
+
+	public void setPrecioBase(int precioBase) {
+		this.precioBase = precioBase;
+	}
+
+
+	public String getColor() {
+		return color;
+	}
+
+
+	public void setColor(String color) {
+		this.color = color;
+	}
+
+
+	public String getConsumoEnergetico() {
+		return ConsumoEnergetico;
+	}
+
+
+	public void setConsumoEnergetico(String consumoEnergetico) {
+		ConsumoEnergetico = consumoEnergetico;
+	}
+
+
+	public int getPeso() {
+		return peso;
+	}
+
+
+	public void setPeso(int peso) {
+		this.peso = peso;
+	}
+	
+	
+
+}

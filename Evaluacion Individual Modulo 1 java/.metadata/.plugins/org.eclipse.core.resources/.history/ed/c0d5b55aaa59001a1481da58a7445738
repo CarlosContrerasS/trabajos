@@ -1,0 +1,20 @@
+/**
+ * 
+ */
+package Prueba_individual;
+
+/**
+ * @author Alumno
+ *
+ */
+public class MainElectrodomesticos {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

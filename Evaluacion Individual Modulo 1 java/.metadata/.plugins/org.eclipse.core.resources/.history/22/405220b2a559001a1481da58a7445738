@@ -1,0 +1,12 @@
+package Prueba_individual;
+
+public class Lavadora extends Electrodomesticos {
+	private int carga = 5;
+
+	public Lavadora(int precioBase, String color, char ConsumoEnergetico,int peso, int carga) {
+		super(precioBase, color, ConsumoEnergetico, peso);
+		this.carga=carga;
+		
+	}
+
+}
