@@ -1,0 +1,82 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="ACF10E79-E872-EB31-9C30-035BD06913F5" name="Preguntas">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-03-13 20:49:15 UTC</createdTime>
+<ownerDesignName>Modelo lógico en OracleDataModeler</ownerDesignName>
+<ordsAlias>table_2</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_Preguntas" id="06DC9CF6-77AB-D358-2C90-29C3E34C1C65">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-03-13 20:50:17 UTC</createdTime>
+<ownerDesignName>Modelo lógico en OracleDataModeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Enunciado" id="6460183E-81CB-E946-A088-9C0870FC30CD">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-03-13 20:50:17 UTC</createdTime>
+<ownerDesignName>Modelo lógico en OracleDataModeler</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Puntaje" id="EEC87598-B0DE-5DB7-C13F-E85551366919">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-03-13 20:50:17 UTC</createdTime>
+<ownerDesignName>Modelo lógico en OracleDataModeler</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Test_ID_Test" id="4EC46FE6-DB98-2B26-B208-B52898E68A2A">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-03-13 21:01:31 UTC</createdTime>
+<ownerDesignName>Modelo lógico en OracleDataModeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="7ADA2E9E-813F-2EE2-2C12-039F6072067E" referredColumn="F805E0E3-A005-AF46-15B6-78C3E699C922"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="80EFC3CB-80A1-610A-CAC9-50128114AC21" name="Preguntas_PK">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-03-13 20:50:17 UTC</createdTime>
+<ownerDesignName>Modelo lógico en OracleDataModeler</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="06DC9CF6-77AB-D358-2C90-29C3E34C1C65"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F121171C-87DC-BFEA-2BDF-6E49DB44468D" name="Preguntas_Test_FK">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-03-13 21:01:31 UTC</createdTime>
+<ownerDesignName>Modelo lógico en OracleDataModeler</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4EC46FE6-DB98-2B26-B208-B52898E68A2A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

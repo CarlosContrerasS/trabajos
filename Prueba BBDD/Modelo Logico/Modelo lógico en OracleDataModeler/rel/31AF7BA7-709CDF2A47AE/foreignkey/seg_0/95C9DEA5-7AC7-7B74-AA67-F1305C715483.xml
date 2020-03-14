@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="95C9DEA5-7AC7-7B74-AA67-F1305C715483" containerWithKeyObject="7D64A06E-8A20-26AE-51A5-A7D9E4F4663A" localFKIndex="30A75404-5DDD-7AA4-266D-6A129A4215DB" name="Alternativas_Preguntas_FK">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-03-13 21:52:06 UTC</createdTime>
+<ownerDesignName>Modelo lógico en OracleDataModeler</ownerDesignName>
+<referredTableLongName>Preguntas</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>ACF10E79-E872-EB31-9C30-035BD06913F5</referredTableID>
+<keyObject>80EFC3CB-80A1-610A-CAC9-50128114AC21</keyObject>
+<referredKeyID>80EFC3CB-80A1-610A-CAC9-50128114AC21</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID_Preguntas</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

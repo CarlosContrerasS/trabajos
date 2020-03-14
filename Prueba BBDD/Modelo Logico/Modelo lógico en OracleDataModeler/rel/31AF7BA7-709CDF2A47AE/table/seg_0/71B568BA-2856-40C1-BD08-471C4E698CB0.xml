@@ -1,0 +1,119 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="71B568BA-2856-40C1-BD08-471C4E698CB0" name="Estudiantes">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-03-13 20:54:46 UTC</createdTime>
+<ownerDesignName>Modelo lógico en OracleDataModeler</ownerDesignName>
+<ordsAlias>table_5</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_Estudiantes" id="54AC0F5B-E1D5-D57E-B6CD-B024610BFE51">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-03-13 20:57:26 UTC</createdTime>
+<ownerDesignName>Modelo lógico en OracleDataModeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Rut" id="1728D4EF-81F1-7C60-F603-0FA7F815B932">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-03-13 20:57:26 UTC</createdTime>
+<ownerDesignName>Modelo lógico en OracleDataModeler</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Digito_verificador" id="F846E0BD-EF74-23BE-CA5B-E181FC1747D8">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-03-13 20:57:26 UTC</createdTime>
+<ownerDesignName>Modelo lógico en OracleDataModeler</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>2</dataTypeSize>
+<ownDataTypeParameters>2,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Nombre" id="07245A97-5BB2-07E6-1953-8B0757818891">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-03-13 20:57:26 UTC</createdTime>
+<ownerDesignName>Modelo lógico en OracleDataModeler</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Apellido_Paterno" id="38AE810B-05B9-4A5D-ACDA-3C0715D01F5E">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-03-13 20:57:26 UTC</createdTime>
+<ownerDesignName>Modelo lógico en OracleDataModeler</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Apellido_Materno" id="40A01A28-0D1A-133B-F070-90D3D8652E60">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-03-13 20:57:26 UTC</createdTime>
+<ownerDesignName>Modelo lógico en OracleDataModeler</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Curso_ID_Curso" id="F47BAB13-E105-2474-E36C-21D675B6C1A8">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-03-13 21:00:15 UTC</createdTime>
+<ownerDesignName>Modelo lógico en OracleDataModeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D1D64EE6-0DC1-31C1-448B-F6E72A34F239" referredColumn="16214623-22B5-BE1A-3117-F323BD9393AD"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="306AA850-683F-E444-FFB7-3F9C95E51023" name="Estudiantes_PK">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-03-13 20:57:26 UTC</createdTime>
+<ownerDesignName>Modelo lógico en OracleDataModeler</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="54AC0F5B-E1D5-D57E-B6CD-B024610BFE51"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B17973C8-52FF-2AC9-4A2E-C7216117D151" name="Estudiantes_Curso_FK">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-03-13 21:00:15 UTC</createdTime>
+<ownerDesignName>Modelo lógico en OracleDataModeler</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F47BAB13-E105-2474-E36C-21D675B6C1A8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

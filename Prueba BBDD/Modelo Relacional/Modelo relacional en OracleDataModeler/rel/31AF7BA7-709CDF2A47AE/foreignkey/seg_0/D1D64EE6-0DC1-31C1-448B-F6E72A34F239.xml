@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="D1D64EE6-0DC1-31C1-448B-F6E72A34F239" containerWithKeyObject="71B568BA-2856-40C1-BD08-471C4E698CB0" localFKIndex="B17973C8-52FF-2AC9-4A2E-C7216117D151" name="Estudiantes_Curso_FK">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-03-13 21:00:15 UTC</createdTime>
+<ownerDesignName>Modelo relacional en OracleDataModeler</ownerDesignName>
+<referredTableLongName>Curso</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>B2CD3BDC-BB9B-B939-383D-B98BA6A186E5</referredTableID>
+<keyObject>7EFF1B82-E39C-AF5F-00E5-D7579A7CABC0</keyObject>
+<referredKeyID>7EFF1B82-E39C-AF5F-00E5-D7579A7CABC0</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID_Curso</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

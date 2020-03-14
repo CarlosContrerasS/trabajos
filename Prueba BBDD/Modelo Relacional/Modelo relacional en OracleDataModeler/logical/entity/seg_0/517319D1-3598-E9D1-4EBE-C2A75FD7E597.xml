@@ -1,0 +1,76 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="517319D1-3598-E9D1-4EBE-C2A75FD7E597" name="Curso">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-03-13 20:42:54 UTC</createdTime>
+<ownerDesignName>Modelo relacional en OracleDataModeler</ownerDesignName>
+<engineerTo>
+<item key="31AF7BA7-501D-91C0-40D9-709CDF2A47AE" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID_Curso" id="170AEF3D-8DA4-9619-E942-BC4C4D5B9440">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-03-13 20:43:23 UTC</createdTime>
+<ownerDesignName>Modelo relacional en OracleDataModeler</ownerDesignName>
+<engineerTo>
+<item key="31AF7BA7-501D-91C0-40D9-709CDF2A47AE" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="N_Estudiantes" id="177996C8-40A9-3275-35C6-2611243A16DB">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-03-13 20:43:39 UTC</createdTime>
+<ownerDesignName>Modelo relacional en OracleDataModeler</ownerDesignName>
+<engineerTo>
+<item key="31AF7BA7-501D-91C0-40D9-709CDF2A47AE" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="N_Evaluaciones" id="1AA9246C-292C-43B4-1489-9F4CE1D90A29">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-03-13 20:44:04 UTC</createdTime>
+<ownerDesignName>Modelo relacional en OracleDataModeler</ownerDesignName>
+<engineerTo>
+<item key="31AF7BA7-501D-91C0-40D9-709CDF2A47AE" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="N_EV_deficiencia" id="52119C35-6493-5C43-C466-775AB6FD6653">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-03-13 20:44:19 UTC</createdTime>
+<ownerDesignName>Modelo relacional en OracleDataModeler</ownerDesignName>
+<engineerTo>
+<item key="31AF7BA7-501D-91C0-40D9-709CDF2A47AE" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="45525094-20B0-025A-595A-A2B83CFE7BCF" name="Curso PK">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-03-13 20:45:38 UTC</createdTime>
+<ownerDesignName>Modelo relacional en OracleDataModeler</ownerDesignName>
+<engineerTo>
+<item key="31AF7BA7-501D-91C0-40D9-709CDF2A47AE" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>170AEF3D-8DA4-9619-E942-BC4C4D5B9440</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

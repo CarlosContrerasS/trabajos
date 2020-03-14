@@ -1,0 +1,133 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="0ECC674C-D3FE-E91E-377F-5901A616A8D5" name="Resultados">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-03-13 20:52:39 UTC</createdTime>
+<ownerDesignName>Modelo lógico en OracleDataModeler</ownerDesignName>
+<ordsAlias>table_4</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_Resultados" id="0472F0E5-F8F5-AF03-2BFF-42065C1059FC">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-03-13 20:54:39 UTC</createdTime>
+<ownerDesignName>Modelo lógico en OracleDataModeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Puntaje_NO_Norma" id="BAFE3E5F-20D6-DFE5-E179-37DC367D06B0">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-03-13 20:54:39 UTC</createdTime>
+<ownerDesignName>Modelo lógico en OracleDataModeler</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT020</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,4,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Puntaje_Normalizado" id="CCA15664-9959-0E84-6524-C37A447D14B8">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-03-13 20:54:39 UTC</createdTime>
+<ownerDesignName>Modelo lógico en OracleDataModeler</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT020</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<dataTypeScale>1</dataTypeScale>
+<ownDataTypeParameters>,2,1</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Preguntas_ID_Preguntas" id="B64E07DD-826C-3B09-5DC9-9EBF340EB2D0">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-03-13 21:55:33 UTC</createdTime>
+<ownerDesignName>Modelo lógico en OracleDataModeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A42B4838-A4BA-C332-EDCE-DB36FD057405" referredColumn="06DC9CF6-77AB-D358-2C90-29C3E34C1C65"/>
+</associations>
+</Column>
+<Column name="Alternativas_ID_Alternativas" id="7C3F3EB0-DB93-F9F8-991C-F856FE080C43">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-03-13 21:55:52 UTC</createdTime>
+<ownerDesignName>Modelo lógico en OracleDataModeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B6FB3739-4243-6649-520F-49A3EEC813D4" referredColumn="63A671F6-D818-5767-C7D6-1388DFEDB757"/>
+</associations>
+</Column>
+<Column name="Estudiantes_ID_Estudiantes" id="58CF80E2-4408-896D-CD79-1EFE63FB009B">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-03-13 22:52:25 UTC</createdTime>
+<ownerDesignName>Modelo lógico en OracleDataModeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="23874A4A-96E0-BCC0-2985-A18EC8C3A8AF" referredColumn="54AC0F5B-E1D5-D57E-B6CD-B024610BFE51"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="2D8552F7-B6C9-78FB-0ED2-3912BADE55F8" name="Resultados_PK">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-03-13 20:54:39 UTC</createdTime>
+<ownerDesignName>Modelo lógico en OracleDataModeler</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0472F0E5-F8F5-AF03-2BFF-42065C1059FC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B88FD740-F3DF-E509-4F69-402FAE20CB9F" name="Resultados_Preguntas_FK">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-03-13 21:55:33 UTC</createdTime>
+<ownerDesignName>Modelo lógico en OracleDataModeler</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B64E07DD-826C-3B09-5DC9-9EBF340EB2D0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7E243ADC-C6C4-9578-65C8-9F9390736109" name="Resultados_Alternativas_FK">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-03-13 21:55:52 UTC</createdTime>
+<ownerDesignName>Modelo lógico en OracleDataModeler</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7C3F3EB0-DB93-F9F8-991C-F856FE080C43"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2D951092-9CE9-9133-C8DD-8FD93E107137" name="Resultados_Estudiantes_FK">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-03-13 22:52:25 UTC</createdTime>
+<ownerDesignName>Modelo lógico en OracleDataModeler</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="58CF80E2-4408-896D-CD79-1EFE63FB009B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

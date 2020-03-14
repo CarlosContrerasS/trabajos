@@ -1,0 +1,78 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="031C7EF9-0C54-F0A7-D47D-0FC97A25D8DC" name="Preguntas">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-03-13 20:34:07 UTC</createdTime>
+<ownerDesignName>Modelo lógico en OracleDataModeler</ownerDesignName>
+<engineerTo>
+<item key="31AF7BA7-501D-91C0-40D9-709CDF2A47AE" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID_Preguntas" id="076A05CD-152C-DA6D-E110-8FF45274DD64">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-03-13 20:34:15 UTC</createdTime>
+<ownerDesignName>Modelo lógico en OracleDataModeler</ownerDesignName>
+<engineerTo>
+<item key="31AF7BA7-501D-91C0-40D9-709CDF2A47AE" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Enunciado" id="6F244EB2-8307-B52B-7DFA-597FC9E31168">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-03-13 20:34:26 UTC</createdTime>
+<ownerDesignName>Modelo lógico en OracleDataModeler</ownerDesignName>
+<engineerTo>
+<item key="31AF7BA7-501D-91C0-40D9-709CDF2A47AE" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Puntaje" id="94AC2FDF-C06A-9E1D-2162-709098092A96">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-03-13 20:35:24 UTC</createdTime>
+<ownerDesignName>Modelo lógico en OracleDataModeler</ownerDesignName>
+<engineerTo>
+<item key="31AF7BA7-501D-91C0-40D9-709CDF2A47AE" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID_Test" id="FC802E55-918B-55FD-B852-FAF470DF4A91">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-03-13 20:37:55 UTC</createdTime>
+<generatorID>35EA9FD1-138F-0D1C-96C6-66EE25274454</generatorID>
+<ownerDesignName>Modelo lógico en OracleDataModeler</ownerDesignName>
+<engineerTo>
+<item key="31AF7BA7-501D-91C0-40D9-709CDF2A47AE" value="true"/>
+</engineerTo>
+<referedAttribute>0FC61E7F-E958-2044-62E0-36C736A690A6</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="500231EA-BEC4-6A89-6BAC-DEDBCE9BB857" name="Preguntas PK">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-03-13 20:34:25 UTC</createdTime>
+<ownerDesignName>Modelo lógico en OracleDataModeler</ownerDesignName>
+<engineerTo>
+<item key="31AF7BA7-501D-91C0-40D9-709CDF2A47AE" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>076A05CD-152C-DA6D-E110-8FF45274DD64</attributeRef>
+<attributeRef>FC802E55-918B-55FD-B852-FAF470DF4A91</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

@@ -1,0 +1,94 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="7D64A06E-8A20-26AE-51A5-A7D9E4F4663A" name="Alternativas">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-03-13 20:50:26 UTC</createdTime>
+<ownerDesignName>Modelo relacional en OracleDataModeler</ownerDesignName>
+<ordsAlias>table_3</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_Alternativas" id="63A671F6-D818-5767-C7D6-1388DFEDB757">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-03-13 20:52:31 UTC</createdTime>
+<ownerDesignName>Modelo relacional en OracleDataModeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Descripcion" id="0AEC5496-273C-FA3E-D354-C02A62577EC5">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-03-13 20:52:31 UTC</createdTime>
+<ownerDesignName>Modelo relacional en OracleDataModeler</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Valor_logico" id="9D38AB15-A108-AA05-62AA-C5BB21C89266">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-03-13 20:52:31 UTC</createdTime>
+<ownerDesignName>Modelo relacional en OracleDataModeler</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT056</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Porcentaje" id="B0E6B0EC-FFBC-E44E-9F1C-90B990EC9A09">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-03-13 20:52:31 UTC</createdTime>
+<ownerDesignName>Modelo relacional en OracleDataModeler</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Preguntas_ID_Preguntas" id="60AB5464-BB54-B6CC-3D98-FD1DE3EAE9DB">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-03-13 21:52:06 UTC</createdTime>
+<ownerDesignName>Modelo relacional en OracleDataModeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="95C9DEA5-7AC7-7B74-AA67-F1305C715483" referredColumn="06DC9CF6-77AB-D358-2C90-29C3E34C1C65"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="1629DBC6-0B12-658B-4F15-CC7A808B9A69" name="Alternativas_PK">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-03-13 20:52:31 UTC</createdTime>
+<ownerDesignName>Modelo relacional en OracleDataModeler</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="63A671F6-D818-5767-C7D6-1388DFEDB757"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="30A75404-5DDD-7AA4-266D-6A129A4215DB" name="Alternativas_Preguntas_FK">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-03-13 21:52:06 UTC</createdTime>
+<ownerDesignName>Modelo relacional en OracleDataModeler</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="60AB5464-BB54-B6CC-3D98-FD1DE3EAE9DB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
